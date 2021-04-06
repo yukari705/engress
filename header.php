@@ -33,3 +33,14 @@
       </div><!-- /.header__right -->
     </div><!-- /.header__inner -->
   </header>
+
+  <?php if (is_front_page()): ?>
+  <section class="top-masthead">
+    <div class="top-masthead__content">
+      <h1>TOEFL対策はEngress</h1>
+      <p>日本人へのTOEFL指導歴豊かな講師陣の<br>コーチング型TOEFLスクール</p>
+      <a class="top-masthead__btn" href="">資料請求</a>
+      <a class="top-masthead__link" href="">お問い合わせ</a>
+    </div><!-- /.top-masthead__content -->
+  </section><!-- /.masthead -->
+  <?php endif; ?>
