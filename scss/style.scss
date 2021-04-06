@@ -1,0 +1,112 @@
+@charset 'UTF-8';
+
+@use 'variables' as v;
+@use 'mixins' as m;
+
+
+/* COMMON
+----------------------------- */
+html {
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+*, ::before, ::after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: "Yu Gothic", "YuGothic", sans-serif;
+    color: v.$text-color;
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+    vertical-align: bottom;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+br.sp,
+br.tb {
+    display: none;
+}
+
+br.pc {
+    display: block;
+}
+
+/* HEADER
+----------------------------- */
+.header {
+    height: 80px;
+    width: 100%;
+
+    &__inner {
+        height: 100%;
+        width: 100%;
+        max-width: 1280px;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        background: #fff;
+    }
+
+    &__left,
+    &__right {
+        display: flex;
+        align-items: center;
+    }
+
+    &__logo {
+        width: 130px;
+        margin-left: 15px;
+        display: block;
+        @include m.resize-img-parent(42.5%);
+
+        img {
+            @include m.resize-img-child(v.$in)
+        }
+    }
+
+    &__info {
+        margin-right: 20px;
+
+        &--hour {
+            font-size: 12px;
+            text-align-last: right;
+        }
+
+        &--tel {
+            font-weight: bold;
+
+            &::before {
+                height: 15px;
+                width: 10px;
+                margin-right: 5px;
+                content: '';
+                display: inline-block;
+                background: url(../images/tel_bk.svg) center center no-repeat;
+                background-size: contain;
+
+            }
+        }
+    }/* &__info */
+
+    &__btn {
+        &--contact {
+            @include m.btn(#F5A623);
+        }
+
+        &--request {
+            @include m.btn(v.$text-color);
+        }
+    }
+}
