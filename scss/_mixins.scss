@@ -1,6 +1,6 @@
-@mixin inner($py) {
+@mixin inner($py: 60px) {
     width: 100%;
-    max-width: 1200px;
+    max-width: 900px;
     margin: auto;
     padding: $py 2%;
 }
