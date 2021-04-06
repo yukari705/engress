@@ -98,7 +98,7 @@ br.pc {
 
             }
         }
-    }/* &__info */
+    }// &__info
 
     &__btn {
         &--contact {
@@ -109,7 +109,7 @@ br.pc {
             @include m.btn-rectangle(v.$text-color);
         }
     }
-}
+}// .header
 
 /* TOP MASTHEAD
 ----------------------------- */
@@ -167,4 +167,67 @@ br.pc {
         color: #fff;
         text-decoration: underline;
     }
-}/* .top-masthead */
+}// .top-masthead
+
+/* INTRO
+----------------------------- */
+.intro {
+    background: v.$text-color;
+    text-align: center;
+
+    h2 {
+        margin-bottom: 40px;
+        font-size: 2.25rem;
+        color: #fff;
+        // text-align: center;
+    }
+
+    ul {
+        margin-bottom: 80px;
+        display: flex;
+        justify-content: center;
+
+        li {
+            margin: 0 15px;
+            font-size: 1.125rem;
+            color: #fff;
+        }
+    }
+
+    &__box {
+        width: 100%;
+        padding: 40px;
+        position: relative;
+        background: #fff;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            right: 15px;
+            bottom: 15px;
+            border: 5px solid v.$text-color;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            color: v.$text-color;
+        }
+
+        span {
+            background: linear-gradient(
+                rgba(255, 255, 255, 0) 60%,
+                v.$main-color 60%,
+                v.$main-color 80%,
+                rgba(255, 255, 255, 0) 80%
+                );
+        }
+    }
+}
+
+.section {
+    &__inner {
+        @include m.inner;
+    }
+}
