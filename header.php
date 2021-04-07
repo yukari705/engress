@@ -28,8 +28,8 @@
           <p class="header__info--hour">平日08:00〜20:00</p>
           <p class="header__info--tel">0123-456-7890</p>
         </div>
-        <a class="header__btn--contact" href="">お問い合わせ</a>
         <a class="header__btn--request" href="">資料請求</a>
+        <a class="header__btn--contact" href="">お問い合わせ</a>
       </div><!-- /.header__right -->
     </div><!-- /.header__inner -->
   </header>

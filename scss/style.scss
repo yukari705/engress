@@ -101,11 +101,11 @@ br.pc {
     }// &__info
 
     &__btn {
-        &--contact {
+        &--request {
             @include m.btn-rectangle(v.$main-color);
         }
 
-        &--request {
+        &--contact {
             @include m.btn-rectangle(v.$text-color);
         }
     }
