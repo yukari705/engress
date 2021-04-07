@@ -148,25 +148,26 @@ br.pc {
             text-align: center;
         }
     }
-
-    &__btn {
-        height: 60px;
-        width: 260px;
-        margin-bottom: 20px;
-        display: table;
-        background: v.$main-color;
-        border-radius: 30px;
-        font-size: 16px;
-        color: #fff;
-        text-align: center;
-        line-height: 60px;
-    }
-
-    &__link {
-        color: #fff;
-        text-decoration: underline;
-    }
 }// .top-masthead
+
+.btn--request {
+    height: 60px;
+    width: 260px;
+    margin-bottom: 20px;
+    display: table;
+    background: v.$main-color;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+    line-height: 60px;
+}
+
+.link {
+    color: #fff;
+    text-decoration: underline;
+}
 
 /* INTRO
 ----------------------------- */
@@ -365,12 +366,10 @@ br.pc {
 
     &__list {
         border-bottom: 1px solid v.$text-color;
-
     }
 
     &__item {
         border-top: 1px solid v.$text-color;
-
     }
 
     &__question {

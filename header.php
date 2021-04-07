@@ -39,8 +39,8 @@
     <div class="top-masthead__content">
       <h1>TOEFL対策はEngress</h1>
       <p>日本人へのTOEFL指導歴豊かな講師陣の<br>コーチング型TOEFLスクール</p>
-      <a class="top-masthead__btn" href="">資料請求</a>
-      <a class="top-masthead__link" href="">お問い合わせ</a>
+      <a class="btn--request" href="">資料請求</a>
+      <a class="link" href="">お問い合わせ</a>
     </div><!-- /.top-masthead__content -->
   </section><!-- /.masthead -->
   <?php endif; ?>
