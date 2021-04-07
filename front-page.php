@@ -53,8 +53,48 @@
     <div class="features__price">
       <p>Engressの料金プランはこちら</p>
       <a class="features__btn" href="">料金を見てみる</a>
-    </div>
+    </div><!-- /.features__price -->
   </div><!-- /.section__inner -->
-</section>
+</section><!-- /.features -->
+
+<section class="flow">
+  <div class="section__inner">
+    <h2 class="section__title">ご利用の流れ</h2>
+    <ul>
+      <li class="flow__item">
+        <div class="flow__number"><span>01</span></div>
+        <dl>
+          <dt>お問い合わせ</dt>
+          <div></div>
+          <dd>まずはフォームまたはお電話からお申し込みください。</dd>
+        </dl>
+      </li><!-- /.flow__item -->
+      <li class="flow__item">
+        <div class="flow__number"><span>02</span></div>
+        <dl>
+          <dt>ヒアリング</dt>
+          <div></div>
+          <dd>現在の学習状況やTOEFLスコア、目標のスコアをお聞きします。</dd>
+        </dl>
+      </li><!-- /.flow__item -->
+      <li class="flow__item">
+        <div class="flow__number"><span>03</span></div>
+        <dl>
+          <dt>学習プランのご提供</dt>
+          <div></div>
+          <dd>目標達成のために最適な学習プランをご提案致します。</dd>
+        </dl>
+      </li><!-- /.flow__item -->
+      <li class="flow__item">
+        <div class="flow__number"><span>04</span></div>
+        <dl>
+          <dt>ご入会</dt>
+          <div></div>
+          <dd>お申込み完了後、レッスンがスタートします。</dd>
+        </dl>
+      </li><!-- /.flow__item -->
+    </ul>
+  </div><!-- /.section__inner -->
+</section><!-- /.flow -->
 
 <?php get_footer(); ?>
