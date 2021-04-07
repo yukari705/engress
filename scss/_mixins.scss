@@ -1,8 +1,8 @@
-@mixin inner($py: 60px) {
+@mixin inner($py: 60px, $px: 0) {
     width: 100%;
     max-width: 900px;
     margin: auto;
-    padding: $py 2%;
+    padding: $py $px;
 }
 
 @mixin link($color) {
