@@ -309,3 +309,49 @@ br.pc {
     }
 
 }// .features
+
+/* FLOW
+----------------------------- */
+.flow {
+    &__item {
+        height: 65px;
+        margin-bottom: 10px;
+        display: flex;
+        background: #F8F8F8;
+
+        dl {
+            display: flex;
+            align-items: center;
+
+            div {
+                height: 50%;
+                border-left: 1px solid #B4B4B4;
+            }
+
+            dt {
+                min-width: 215px;
+                padding: 0 20px;
+                font-size: 1.125rem;
+                font-weight: bold;
+            }
+
+            dd {
+                margin-left: 60px;
+            }
+        }
+    }// &__item
+
+    &__number {
+        height: 100%;
+        width: 65px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: v.$main-color;
+
+        span {
+            color: #fff;
+            font-weight: bold;
+        }
+    }// &__number
+}//.flow
