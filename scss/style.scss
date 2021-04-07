@@ -76,30 +76,6 @@ br.pc {
         }
     }
 
-    &__info {
-        margin-right: 20px;
-
-        &--hour {
-            font-size: 12px;
-            text-align-last: right;
-        }
-
-        &--tel {
-            font-weight: bold;
-
-            &::before {
-                height: 15px;
-                width: 10px;
-                margin-right: 5px;
-                content: '';
-                display: inline-block;
-                background: url(../images/tel_bk.svg) center center no-repeat;
-                background-size: contain;
-
-            }
-        }
-    }// &__info
-
     &__btn {
         &--request {
             @include m.btn-rectangle(v.$main-color);
@@ -110,6 +86,32 @@ br.pc {
         }
     }
 }// .header
+
+.info {
+    margin-right: 20px;
+
+    &--hour {
+        font-size: 12px;
+        text-align: right;
+    }
+
+    &--tel {
+        font-weight: bold;
+        text-align: right;
+
+        &::before {
+            height: 15px;
+            width: 10px;
+            margin-right: 5px;
+            content: '';
+            display: inline-block;
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-image: url(../images/tel_bk.svg);
+        }
+    }
+}// .info
 
 /* TOP MASTHEAD
 ----------------------------- */
@@ -153,7 +155,7 @@ br.pc {
 .btn--request {
     height: 60px;
     width: 260px;
-    margin-bottom: 20px;
+    margin: 0 auto 20px;
     display: table;
     background: v.$main-color;
     border-radius: 30px;
@@ -165,6 +167,8 @@ br.pc {
 }
 
 .link {
+    display: table;
+    margin: 0 auto;
     color: #fff;
     text-decoration: underline;
 }
@@ -311,7 +315,6 @@ br.pc {
         text-align: center;
         line-height: 50px;
     }
-
 }// .features
 
 /* FLOW
@@ -397,3 +400,96 @@ br.pc {
         // display: none;
     }
 }// .faq
+
+/* FOOTER
+----------------------------- */
+.footer {
+    &__banner {
+        padding: 60px 0 40px;
+        background: url(../images/footer-banner.png) center center no-repeat;
+        background-size: cover;
+
+        p {
+            margin-bottom: 20px;
+            color: #fff;
+            font-size: 2rem;
+            font-weight: bold;
+            text-align: center;
+        }
+    }// &__banner
+
+    &__tel {
+        font-weight: bold;
+        text-align: center;
+
+        span {
+            margin: 10px 20px;
+            display: inline-block;
+            font-size: 2rem;
+        }
+
+        p {
+            display: inline-block;
+            font-weight: normal;
+        }
+    }
+
+    &__nav {
+        display: flex;
+        background: v.$text-color;
+    }
+
+    &__inner {
+        @include m.inner(30px);
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__right {
+        margin-bottom: 30px;
+        color: #fff;
+
+        figure {
+            width: 200px;
+            height: 60px;
+            margin-bottom: 20px;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            background: #fff;
+        }
+    }// &__right
+
+    .info {
+        &--tel {
+            color: #fff;
+
+            &::before {
+                background-image: url(../images/tel_wh.svg);
+            }
+        }
+
+        &--hour {
+            margin-bottom: 10px;
+            color: #fff;
+        }
+    }
+
+    &__copyright {
+        background: #fff;
+
+        p {
+            height: 35px;
+            width: 900px;
+            margin: auto;
+            text-align: right;
+
+            small {
+                font-size: 12px;
+                font-weight: bold;
+                line-height: 35px;
+            }
+        }
+    }// &__copyright
+}// .footer
