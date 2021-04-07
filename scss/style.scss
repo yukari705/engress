@@ -355,3 +355,43 @@ br.pc {
         }
     }// &__number
 }//.flow
+
+/* FAQ
+----------------------------- */
+.faq {
+    .section__inner {
+        padding-top: 15px;
+    }
+
+    &__list {
+        border-bottom: 1px solid v.$text-color;
+
+    }
+
+    &__item {
+        border-top: 1px solid v.$text-color;
+
+    }
+
+    &__question {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        h3 {
+            font-size: 1rem;
+            font-weight: normal;
+            cursor: pointer;
+        }
+
+        span {
+            font-size: 2.5rem;
+        }
+    }
+
+    &__answer {
+        padding: 20px 25px;
+        background: #F8F8F8;
+        // display: none;
+    }
+}// .faq
