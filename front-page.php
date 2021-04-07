@@ -97,4 +97,40 @@
   </div><!-- /.section__inner -->
 </section><!-- /.flow -->
 
+<section class="faq">
+  <div class="section__inner">
+    <h2 class="section__title">よくある質問</h2>
+    <ul class="faq__list">
+      <li class="faq__item">
+        <div class="faq__question">
+          <h3>Engressはサラリーマンでも学習を続けられるでしょうか？</h3>
+          <span>+</span>
+        </div><!-- /.faq__question -->
+        <div class="faq__answer is-open">Engressは各個人に最適な学習プランをご提供しております。サラリーマンの方でも継続できます。</div>
+      </li><!-- /.faq__item -->
+      <li class="faq__item">
+        <div class="faq__question">
+          <h3>教材はオリジナルのものを使用しているのでしょうか？</h3>
+          <span>+</span>
+        </div><!-- /.faq__question -->
+        <div class="faq__answer">Engressが独自に作成した教材を使用しております。</div>
+      </li><!-- /.faq__item -->
+      <li class="faq__item">
+        <div class="faq__question">
+          <h3>講師に日本人はいますか？</h3>
+          <span>+</span>
+        </div><!-- /.faq__question -->
+        <div class="faq__answer">講師は英語のネイティブスピーカーのみです。</div>
+      </li><!-- /.faq__item -->
+      <li class="faq__item">
+        <div class="faq__question">
+          <h3>TOEFL以外の海外大学合格のサポートもしてもらえるのでしょうか？</h3>
+          <span>+</span>
+        </div><!-- /.faq__question -->
+        <div class="faq__answer">TOEFL以外のサポートは行っておりませんが、卒業生の体験談の閲覧や、卒業生との交流ができます。</div>
+      </li><!-- /.faq__item -->
+    </ul><!-- /.faq__list -->
+  </div><!-- /.section__inner -->
+</section><!-- /.faq -->
+
 <?php get_footer(); ?>
