@@ -24,9 +24,9 @@
         </nav>
       </div><!-- /.header__left -->
       <div class="header__right">
-        <div class="header__info">
-          <p class="header__info--hour">平日08:00〜20:00</p>
-          <p class="header__info--tel">0123-456-7890</p>
+        <div class="info">
+          <p class="info--hour">平日08:00〜20:00</p>
+          <p class="info--tel">0123-456-7890</p>
         </div>
         <a class="header__btn--request" href="">資料請求</a>
         <a class="header__btn--contact" href="">お問い合わせ</a>
