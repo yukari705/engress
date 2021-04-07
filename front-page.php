@@ -113,21 +113,21 @@
           <h3>教材はオリジナルのものを使用しているのでしょうか？</h3>
           <span>+</span>
         </div><!-- /.faq__question -->
-        <div class="faq__answer">Engressが独自に作成した教材を使用しております。</div>
+        <div class="faq__answer">Engressが独自に作成したオリジナル教材を使用しております。</div>
       </li><!-- /.faq__item -->
       <li class="faq__item">
         <div class="faq__question">
           <h3>講師に日本人はいますか？</h3>
           <span>+</span>
         </div><!-- /.faq__question -->
-        <div class="faq__answer">講師は英語のネイティブスピーカーのみです。</div>
+        <div class="faq__answer">講師は英語を母国語とするネイティブスピーカーのみです。</div>
       </li><!-- /.faq__item -->
       <li class="faq__item">
         <div class="faq__question">
           <h3>TOEFL以外の海外大学合格のサポートもしてもらえるのでしょうか？</h3>
           <span>+</span>
         </div><!-- /.faq__question -->
-        <div class="faq__answer">TOEFL以外のサポートは行っておりませんが、卒業生の体験談の閲覧や、卒業生との交流ができます。</div>
+        <div class="faq__answer">志望校対策プランでは、進学先に合わせたサポートまで包括的に行います。</div>
       </li><!-- /.faq__item -->
     </ul><!-- /.faq__list -->
   </div><!-- /.section__inner -->
