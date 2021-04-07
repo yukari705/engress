@@ -231,3 +231,9 @@ br.pc {
         @include m.inner;
     }
 }
+    &__title {
+        margin-bottom: 30px;
+        font-size: 2.25rem;
+        text-align: center;
+    }
+}// .section
