@@ -424,9 +424,9 @@ br.pc {
     }// &__copyright
 }// .footer
 
-/* STRUCTURE
+/* FEE STRUCTURE
 ----------------------------- */
-.structure {
+.fee-structure {
     &__formula {
         display: table;
         margin: 60px auto 40px;
@@ -450,4 +450,78 @@ br.pc {
             font-size: 2.5rem;            font-weight: bold;
         }
     }// &__formula
-}// .structure
+}// .fee-structure
+
+/* FEE LIST
+----------------------------- */
+.fee-list {
+    .section__title {
+        margin-bottom: 100px;
+    }
+
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 100px;
+    }
+
+    &__item {
+        flex: 0 0 calc((100% - 15px) / 4);
+        border: 1px solid v.$text-color;
+        text-align: center;
+
+        &.recommend {
+            border-color: v.$main-color;
+            position: relative;
+
+            .fee-list__name {
+                background: v.$main-color;
+
+                &::before {
+                    content: 'おすすめ';
+                    display: block;
+                    height: 35px;
+                    width: 100%;
+                    padding-top: 15px;
+                    position: absolute;
+                    top: -35px;
+                    left: 0;
+                    box-shadow: 0 0 0 1px v.$main-color;
+                    background: v.$main-color;
+                    color: #fff;
+                }
+            }
+
+            .fee-list__fee p {
+                color: v.$main-color;
+            }
+        }// &.recommend
+    }// &__item
+
+    &__name {
+        padding: 20px;
+        background: v.$text-color;
+        color: #fff;
+        font-weight: bold;
+    }
+
+    &__fee {
+        margin: 20px auto 30px;
+
+        p {
+            margin-bottom: 5px;
+            font-size: 1.625rem;
+            font-weight: bold;
+        }
+    }
+
+    &__content {
+        padding: 0 10px 80px 40px;
+        list-style-image: url(../images/icon-check.png);
+        text-align: left;
+
+        li {
+            margin-bottom: 10px;
+        }
+    }
+}// .fee-list
