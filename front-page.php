@@ -57,6 +57,26 @@
   </div><!-- /.section__inner -->
 </section><!-- /.features -->
 
+<section class="cases">
+  <div class="section__inner">
+    <h2 class="section__title">TOEFL成功事例</h2>
+    <ul class="cases__list">
+      <?php
+      $cases = array('case1', 'case2', 'case3');
+      foreach ($cases as $case) :
+        if (have_rows($case)) :
+          while (have_rows($case)) : the_row();
+            get_template_part('content-case');
+          endwhile;
+        endif;
+      endforeach;
+      ?>
+    </ul><!-- /.cases__list -->
+
+  </div><!-- /.section__inner -->
+</section><!-- /.cases -->
+
+
 <section class="flow">
   <div class="section__inner">
     <h2 class="section__title">ご利用の流れ</h2>
