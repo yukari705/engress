@@ -22,7 +22,7 @@
       foreach ($courses as $course) :
         if (have_rows($course)) :
           while (have_rows($course)) : the_row();
-            get_template_part('content-course');
+            get_template_part('content-fee');
           endwhile;
         endif;
       endforeach;
