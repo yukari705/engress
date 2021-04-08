@@ -45,12 +45,14 @@
       </div><!-- /.top-masthead__content -->
     </section><!-- /.masthead -->
 
-  <?php elseif (is_page()) : ?>
+  <?php else : ?>
     <section class="sub-masthead">
-      <div class="sub-masthead__title">
-        <figure class="sub-masthead__img"><?php the_post_thumbnail(); ?></figure>
-        <h1><?php the_title(); ?></h1>
-      </div><!-- /.sub-masthead__title -->
+      <?php if (!is_single()) : ?>
+        <div class="sub-masthead__title">
+          <figure class="sub-masthead__img"><?php the_post_thumbnail(); ?></figure>
+          <h1><?php the_title(); ?></h1>
+        </div><!-- /.sub-masthead__title -->
+      <?php endif; ?>
       <div class="breadcrumbs" typeof="BreadcrumbList" vocab="https://schema.org/">
         <?php if (function_exists('bcn_display')) {
           bcn_display();
