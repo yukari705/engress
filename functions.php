@@ -1,4 +1,5 @@
 <?php
+// CSS, jsの読み込み
 function my_enqueue_scripts() {
     wp_enqueue_style(
         'style',
@@ -7,3 +8,6 @@ function my_enqueue_scripts() {
     );
 }
 add_action('wp_enqueue_scripts', 'my_enqueue_scripts');
+
+// アイキャッチ画像を利用できるようにする
+add_theme_support('post-thumbnails');
