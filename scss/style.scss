@@ -317,6 +317,65 @@ br.pc {
     }
 }// .features
 
+/* CASES
+----------------------------- */
+.cases {
+    background: v.$text-color;
+
+    .section__title {
+        margin-bottom: 100px;
+        color: #fff;
+    }
+
+    &__list {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__item {
+        flex: 0 0 31%;
+        position: relative;
+    }
+
+    &__overview {
+        margin-bottom: 10px;
+        color: #fff;
+        font-weight: bold;
+    }
+
+    &__img {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin-bottom: 15px;
+        padding-top: 30px;
+        background: #fff;
+    }
+
+    &__profession,
+    &__name,
+    &__score {
+        padding: 5px 10px;
+        background: #fff;
+    }
+
+    &__profession {
+        display: inline-block;
+        width: 35%;
+    }
+
+    &__name {
+        display: inline-block;
+        width: 62%;
+        position: absolute;
+        right: 0;
+    }
+
+    &__score {
+        margin-top: 15px;
+    }
+}// .cases
+
 /* FLOW
 ----------------------------- */
 .flow {
