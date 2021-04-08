@@ -423,3 +423,31 @@ br.pc {
         }
     }// &__copyright
 }// .footer
+
+/* STRUCTURE
+----------------------------- */
+.structure {
+    &__formula {
+        display: table;
+        margin: 60px auto 40px;
+
+        div {
+            display: table-cell;
+            vertical-align: middle;
+            height: 90px;
+            width: 290px;
+            background: v.$text-color;
+            font-size: 1.375rem;
+            font-weight: bold;
+            color: #fff;
+            text-align: center;
+        }
+
+        span {
+            display: table-cell;
+            vertical-align: middle;
+            padding: 0 35px;
+            font-size: 2.5rem;            font-weight: bold;
+        }
+    }// &__formula
+}// .structure
