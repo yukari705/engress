@@ -50,10 +50,10 @@
         <figure><img src="<?php echo get_template_directory_uri(); ?>/images/feature03.png" alt=""></figure>
       </li><!-- /.features__item -->
     </ul><!-- /.features__list -->
-    <div class="features__price">
+    <div class="features__fee">
       <p>Engressの料金プランはこちら</p>
       <a class="features__btn" href="">料金を見てみる</a>
-    </div><!-- /.features__price -->
+    </div><!-- /.features__fee -->
   </div><!-- /.section__inner -->
 </section><!-- /.features -->
 
@@ -75,7 +75,6 @@
 
   </div><!-- /.section__inner -->
 </section><!-- /.cases -->
-
 
 <section class="flow">
   <div class="section__inner">
