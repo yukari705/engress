@@ -34,13 +34,27 @@
     </div><!-- /.header__inner -->
   </header>
 
-  <?php if (is_front_page()): ?>
-  <section class="top-masthead">
-    <div class="top-masthead__content">
-      <h1>TOEFL対策はEngress</h1>
-      <p>日本人へのTOEFL指導歴豊かな講師陣の<br>コーチング型TOEFLスクール</p>
-      <a class="btn--request" href="">資料請求</a>
-      <a class="link" href="">お問い合わせ</a>
-    </div><!-- /.top-masthead__content -->
-  </section><!-- /.masthead -->
+  <?php if (is_front_page()) : ?>
+    <!-- FRONT PAGE -->
+    <section class="top-masthead">
+      <div class="top-masthead__content">
+        <h1>TOEFL対策はEngress</h1>
+        <p>日本人へのTOEFL指導歴豊かな講師陣の<br>コーチング型TOEFLスクール</p>
+        <a class="btn--request" href="">資料請求</a>
+        <a class="link" href="">お問い合わせ</a>
+      </div><!-- /.top-masthead__content -->
+    </section><!-- /.masthead -->
+
+  <?php elseif (is_page()) : ?>
+    <section class="sub-masthead">
+      <div class="sub-masthead__title">
+        <figure class="sub-masthead__img"><?php the_post_thumbnail(); ?></figure>
+        <h1><?php the_title(); ?></h1>
+      </div><!-- /.sub-masthead__title -->
+      <div class="breadcrumbs" typeof="BreadcrumbList" vocab="https://schema.org/">
+        <?php if (function_exists('bcn_display')) {
+          bcn_display();
+        } ?>
+      </div><!-- /.breadcrumbs -->
+    </section><!-- /.sub-masthead -->
   <?php endif; ?>
