@@ -19,7 +19,7 @@
   <header class="header">
     <div class="header__inner">
       <div class="header__left">
-        <a class="header__logo"><img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" alt=""></a>
+        <a class="header__logo" href="/"><img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" alt=""></a>
         <nav class="header__nav">
           <?php
           wp_nav_menu(
@@ -36,8 +36,8 @@
           <p class="info--hour">平日08:00〜20:00</p>
           <p class="info--tel">0123-456-7890</p>
         </div>
-        <a class="header__btn--request" href="">資料請求</a>
-        <a class="header__btn--contact" href="">お問い合わせ</a>
+        <a class="header__btn--request" href="<?php echo esc_url(home_url('contact')); ?>">資料請求</a>
+        <a class="header__btn--contact" href="<?php echo esc_url(home_url('contact')); ?>">お問い合わせ</a>
       </div><!-- /.header__right -->
     </div><!-- /.header__inner -->
   </header>
@@ -48,8 +48,8 @@
       <div class="top-masthead__content">
         <h1>TOEFL対策はEngress</h1>
         <p>日本人へのTOEFL指導歴豊かな講師陣の<br>コーチング型TOEFLスクール</p>
-        <a class="btn--request" href="">資料請求</a>
-        <a class="link" href="">お問い合わせ</a>
+        <a class="btn--request" href="<?php echo esc_url(home_url('contact')); ?>">資料請求</a>
+        <a class="link" href="<?php echo esc_url(home_url('contact')); ?>">お問い合わせ</a>
       </div><!-- /.top-masthead__content -->
     </section><!-- /.masthead -->
 

@@ -1,8 +1,8 @@
 <footer class="footer">
     <div class="footer__banner">
         <p>まずは無料で資料請求から</p>
-        <a class="btn--request" href="">資料請求</a>
-        <a class="link" href="">お問い合わせ</a>
+        <a class="btn--request" href="<?php echo esc_url(home_url('contact')); ?>">資料請求</a>
+        <a class="link" href="<?php echo esc_url(home_url('contact')); ?>">お問い合わせ</a>
     </div><!-- /.footer__banner -->
     <div class="footer__tel">
         お電話でのお問い合わせはこちら

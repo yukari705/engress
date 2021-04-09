@@ -52,7 +52,7 @@
     </ul><!-- /.features__list -->
     <div class="features__fee">
       <p>Engressの料金プランはこちら</p>
-      <a class="features__btn" href="">料金を見てみる</a>
+      <a class="features__btn" href="<?php echo esc_url(home_url('fee')); ?>">料金を見てみる</a>
     </div><!-- /.features__fee -->
   </div><!-- /.section__inner -->
 </section><!-- /.features -->
