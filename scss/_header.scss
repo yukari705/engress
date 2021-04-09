@@ -46,7 +46,7 @@
 
             a {
                 font-weight: bold;
-                color: v.$text-color;
+                @include m.link-txt(v.$text-color);
             }
         }
     }
@@ -132,19 +132,18 @@
     width: 260px;
     margin: 0 auto 20px;
     display: table;
-    background: v.$main-color;
     border-radius: 30px;
     font-size: 16px;
     font-weight: bold;
-    color: #fff;
     text-align: center;
     line-height: 60px;
+    @include m.link-btn(v.$main-color);
 }
 
 .link {
     display: table;
     margin: 0 auto;
-    color: #fff;
+    @include m.link-txt(#fff);
     text-decoration: underline;
 }
 
@@ -182,7 +181,7 @@
     font-size: 0.75rem;
 
     a {
-        color: v.$text-color;
+        @include m.link-txt(v.$text-color);
         text-decoration: underline;
     }
 }

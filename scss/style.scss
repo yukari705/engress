@@ -185,6 +185,11 @@ br.pc {
         color: #fff;
         text-align: center;
         line-height: 50px;
+        transition: background-color .2s;
+
+        &:hover {
+            background: rgba(255, 255, 255, 0.4);
+        }
     }
 }// .features
 
@@ -312,11 +317,11 @@ br.pc {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        cursor: pointer;
 
         h3 {
             font-size: 1rem;
             font-weight: normal;
-            cursor: pointer;
         }
 
         span {
@@ -580,6 +585,11 @@ br.pc {
         justify-content: space-between;
         position: relative;
         color: v.$text-color;
+        transition: opacity .2s;
+
+        &:hover {
+            opacity: .6;
+        }
     }
 
     &__img {

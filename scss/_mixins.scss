@@ -1,5 +1,6 @@
 @charset 'UTF-8';
 
+@use 'sass:color';
 @use 'variables' as v;
 
 @mixin inner($py: 60px, $px: 0) {
@@ -9,12 +10,22 @@
     padding: $py $px;
 }
 
-@mixin link($color) {
+@mixin link-txt($color) {
     color: $color;
-    transition: opacity .3s;
+    transition: opacity .2s;
 
     &:hover {
-        opacity: .6;
+        opacity: .7;
+    }
+}
+
+@mixin link-btn($bg) {
+    background: $bg;
+    color: #fff;
+    transition: background-color .2s;
+
+    &:hover {
+        background: color.scale($bg, $lightness: 30%);
     }
 }
 
@@ -23,12 +34,15 @@
     margin-right: 10px;
     padding: 15px 0;
     display: table;
-    background: $bg;
     border-radius: 5px;
     text-align: center;
     font-size: 14px;
     font-weight: bold;
-    color: #fff;
+    @include link-btn($bg);
+
+    &:hover {
+        background: color.scale($bg, $lightness: 20%);
+    }
 }
 
 @mixin btn-hover {
@@ -60,5 +74,4 @@
     width: $width;
     background: $color;
     color: #fff;
-
 }
