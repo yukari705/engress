@@ -155,10 +155,8 @@ br.pc {
     }// &__item
 
     &__number {
-        width: fit-content;
+        @include m.txt-bg($color: v.$main-color);
         padding: 10px 25px;
-        background: v.$main-color;
-        color: #fff;
         font-size: 0.75rem;
     }
 
@@ -450,15 +448,11 @@ br.pc {
 
         li {
             a {
-                display: block;
-                width: fit-content;
+                @include m.txt-bg;
                 margin-right: 10px;
                 margin-bottom: 20px;
                 padding: 10px 25px;
-                background: v.$text-color;
-                color: #fff;
                 font-size: 0.75rem;
-                color: #fff;
             }
         }
     }
@@ -573,3 +567,78 @@ br.pc {
         color: #fff;
     }
 }
+
+/* BLOG ARCHIVE
+----------------------------- */
+.blog-archive {
+    li {
+        margin-bottom: 90px;
+    }
+
+    &__item {
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        color: v.$text-color;
+    }
+
+    &__img {
+        width: 26%;
+        @include m.resize-img-parent(63%);
+
+        img {
+            @include m.resize-img-child;
+        }
+    }
+
+    &__category {
+        @include m.txt-bg;
+        padding: 5px 10px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        font-size: 12px;
+    }
+
+    &__body {
+        width: 67%;
+    }
+
+    &__date {
+        margin-bottom: 5px;
+        text-align: left;
+    }
+
+    &__title {
+        margin-bottom: 10px;
+        font-size: 1.625rem;
+        font-weight: bold;
+        text-decoration: underline;
+    }
+}// .blog-archive
+
+.pagenation {
+    display: flex;
+    justify-content: center;
+    padding: 40px;
+
+    span,
+    a {
+        @include m.txt-bg(50px);
+        height: 50px;
+        margin: 0 10px;
+        text-align: center;
+        font-weight: bold;
+        line-height: 50px;
+    }
+
+    a,
+    .dots {
+        background: #fff;
+        color: v.$text-color;
+    }
+
+    a {
+        border: 1px solid v.$text-color;
+    }
+}// .pagenation
