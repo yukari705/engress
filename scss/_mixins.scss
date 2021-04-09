@@ -1,3 +1,7 @@
+@charset 'UTF-8';
+
+@use 'variables' as v;
+
 @mixin inner($py: 60px, $px: 0) {
     width: 100%;
     max-width: 900px;
@@ -42,11 +46,19 @@
     }
 }
 
-@mixin resize-img-child($type) {
+@mixin resize-img-child($type: v.$ex) {
     width: 100%;
     height: 100%;
     position: absolute;
     top: 0;
     left: 0;
     object-fit: $type;
+}
+
+@mixin txt-bg($width: fit-content, $color: v.$text-color) {
+    display: block;
+    width: $width;
+    background: $color;
+    color: #fff;
+
 }
