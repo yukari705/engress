@@ -36,6 +36,21 @@
         }
     }
 
+    &__nav {
+        ul {
+            display: flex;
+
+            li {
+                margin-left: 30px;
+            }
+
+            a {
+                font-weight: bold;
+                color: v.$text-color;
+            }
+        }
+    }
+
     &__btn {
         &--request {
             @include m.btn-rectangle(v.$main-color);
@@ -153,9 +168,11 @@
 
     &__img {
         height: 220px;
+        width: 100vw;
 
         img {
             object-fit: cover;
+
         }
     }
 }// .sub-masthead
