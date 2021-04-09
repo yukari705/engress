@@ -152,4 +152,17 @@
   </div><!-- /.section__inner -->
 </section><!-- /.faq -->
 
+<section class="top-archive">
+  <div class="section__inner">
+    <div class="blog-archive top">
+      <h2>ブログ</h2>
+      <?php get_template_part('content-archive-blog'); ?>
+    </div><!-- /.blog-archive -->
+    <div class="news-archive top">
+      <h2>お知らせ</h2>
+      <!-- <?php get_template_part('content-archive-blog'); ?> -->
+    </div><!-- /.blog-archive -->
+  </div><!-- /.section__inner -->
+</section><!-- /.top-archive -->
+
 <?php get_footer(); ?>
