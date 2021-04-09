@@ -11,3 +11,6 @@ add_action('wp_enqueue_scripts', 'my_enqueue_scripts');
 
 // アイキャッチ画像を利用できるようにする
 add_theme_support('post-thumbnails');
+
+    // ヘッダー用のサイズ設定
+    add_image_size('masthead', 2560, 440, true);
