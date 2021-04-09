@@ -11,7 +11,16 @@
     </div><!-- /.footer__tel -->
     <div class="footer__nav">
         <div class="footer__inner">
-            <nav></nav>
+            <nav>
+                <?php
+                wp_nav_menu(
+                    array(
+                        'theme_location' => 'place_footer',
+                        'container' => false
+                    )
+                );
+                ?>
+            </nav>
             <div class="footer__right">
                 <figure><img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" alt=""></figure>
                 <p class="info--tel">0123-456-7890</p>
