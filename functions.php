@@ -35,21 +35,3 @@ if (function_exists('register_sidebar')) {
     'after_title' => '</h2>'
     ));
 }
-
-// ブログの全投稿を取得
-function get_all_posts() {
-    $paged = (int) get_query_var('paged');
-    $args = array(
-        'posts_per_page' => 10,
-        'paged' => $paged,
-        'orderby' => 'post_date',
-        'order' => 'DESC',
-        'post_type' => 'post',
-        'post_status' => 'publish'
-    );
-    if (is_front_page()) {
-        $args['posts_per_page'] = 3;
-    }
-    $all_posts = new WP_Query($args);
-    return $all_posts;
-}
