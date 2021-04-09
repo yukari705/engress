@@ -380,6 +380,25 @@ br.pc {
         justify-content: space-between;
     }
 
+    nav ul {
+        display: flex;
+        padding-top: 20px;
+
+        li {
+            padding-right: 20px;
+
+            &:not(:first-of-type) {
+                padding-left: 20px;
+                border-left: 1px solid #fff;
+            }
+        }
+
+        a {
+            font-weight: bold;
+            @include m.link-txt(#fff);
+        }
+    }
+
     &__right {
         margin-bottom: 30px;
         color: #fff;
