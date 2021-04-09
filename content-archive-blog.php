@@ -1,18 +1,6 @@
 <ul>
     <?php
-    $paged = (int) get_query_var('paged');
-    $args = array(
-        'posts_per_page' => 10,
-        'paged' => $paged,
-        'orderby' => 'post_date',
-        'order' => 'DESC',
-        'post_type' => 'post',
-        'post_status' => 'publish'
-    );
-    if (is_front_page()) :
-        $args['posts_per_page'] = 3;
-    endif;
-    $the_query = new WP_Query($args);
+    $the_query = get_all_posts();
     if ($the_query->have_posts()) :
         while ($the_query->have_posts()) : $the_query->the_post();
     ?>
@@ -29,12 +17,13 @@
                     <div class="blog-archive__body">
                         <p class="blog-archive__date"><?php the_time('Y-m-d'); ?></p>
                         <h1 class="blog-archive__title"><?php the_title(); ?></h1>
-                        <?php if (is_page('blog')): ?>
-                        <p><?php echo get_the_excerpt(); ?></p>
+                        <?php if (is_page('blog')) : ?>
+                            <p><?php echo get_the_excerpt(); ?></p>
                         <?php endif; ?>
                     </div>
                 </a>
             </li>
     <?php endwhile;
+        wp_reset_postdata();
     endif; ?>
 </ul>
