@@ -20,7 +20,15 @@
     <div class="header__inner">
       <div class="header__left">
         <a class="header__logo"><img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" alt=""></a>
-        <nav>
+        <nav class="header__nav">
+          <?php
+          wp_nav_menu(
+            array (
+              'theme_location' => 'place_global',
+              'container' => false
+            )
+          );
+          ?>
         </nav>
       </div><!-- /.header__left -->
       <div class="header__right">
@@ -49,7 +57,7 @@
     <section class="sub-masthead">
       <?php if (!is_single()) : ?>
         <div class="sub-masthead__title">
-          <figure class="sub-masthead__img"><?php the_post_thumbnail(); ?></figure>
+          <figure class="sub-masthead__img"><?php the_post_thumbnail('masthead'); ?></figure>
           <h1><?php the_title(); ?></h1>
         </div><!-- /.sub-masthead__title -->
       <?php endif; ?>
