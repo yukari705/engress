@@ -170,12 +170,11 @@
     }
 
     &__img {
-        height: 220px;
         width: 100vw;
+        @include m.resize-img-parent(17%);
 
         img {
-            object-fit: cover;
-
+            @include m.resize-img-child;
         }
     }
 }// .sub-masthead

@@ -57,7 +57,13 @@
     <section class="sub-masthead">
       <?php if (!is_single()) : ?>
         <div class="sub-masthead__title">
-          <figure class="sub-masthead__img"><?php the_post_thumbnail('masthead'); ?></figure>
+          <figure class="sub-masthead__img">
+            <?php if(is_post_type_archive('news')): ?>
+              <img src="<?php echo get_template_directory_uri(  ); ?>/images/masthead/news.png" alt="">
+            <?php else: ?>
+              <?php the_post_thumbnail('masthead'); ?>
+            <?php endif; ?>
+          </figure>
           <h1><?php echo get_main_title(); ?></h1>
         </div><!-- /.sub-masthead__title -->
       <?php endif; ?>
