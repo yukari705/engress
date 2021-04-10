@@ -160,7 +160,7 @@
     </div><!-- /.blog-archive -->
     <div class="news-archive top">
       <h2>お知らせ</h2>
-      <!-- <?php get_template_part('content-archive-blog'); ?> -->
+      <?php get_template_part('content-archive-news'); ?>
     </div><!-- /.blog-archive -->
   </div><!-- /.section__inner -->
 </section><!-- /.top-archive -->

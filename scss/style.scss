@@ -764,4 +764,26 @@ br.pc {
         text-decoration: underline;
         @include m.link-txt(v.$text-color);
     }
+
+    &.top {
+        width: 45%;
+
+        .news-archive__list {
+            border: none;
+        }
+
+        .news-archive__item {
+            display: block;
+            min-height: 90px;
+            margin-bottom: 15px;
+            padding: 0;
+            border: none;
+        }
+
+        .news-archive__date {
+            margin-right: 0;
+            margin-bottom: 10px;
+            font-size: 0.75rem;
+        }
+    }// .top
 }// .news-archive
