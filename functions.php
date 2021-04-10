@@ -38,6 +38,16 @@ if (function_exists('register_sidebar')) {
 }
 
 
+// ページのタイトルを取得
+function get_main_title() {
+    if (is_page()):
+        return get_the_title();
+    elseif (is_post_type_archive('news')):
+        return get_post_type_object(get_post_type())->label;
+    endif;
+}
+
+
 // ブログ、お知らせのBreadcrumbsにアーカイブページの項目を追加
 function insert_breadcrumb_item($breadcrumb_trail)
 {
@@ -74,7 +84,7 @@ function get_all_posts($post_type)
 }
 
 
-// pagenation
+// Pagenationを表示
 function get_pagenation() {
     if (is_page('blog')) {
         $the_query = get_all_posts('post');

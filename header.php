@@ -58,7 +58,7 @@
       <?php if (!is_single()) : ?>
         <div class="sub-masthead__title">
           <figure class="sub-masthead__img"><?php the_post_thumbnail('masthead'); ?></figure>
-          <h1><?php the_title(); ?></h1>
+          <h1><?php echo get_main_title(); ?></h1>
         </div><!-- /.sub-masthead__title -->
       <?php endif; ?>
       <div class="breadcrumbs" typeof="BreadcrumbList" vocab="https://schema.org/">
