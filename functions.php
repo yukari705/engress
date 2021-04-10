@@ -1,6 +1,7 @@
 <?php
 // CSS, jsの読み込み
-function my_enqueue_scripts() {
+function my_enqueue_scripts()
+{
     wp_enqueue_style(
         'style',
         get_template_directory_uri() . '/css/style.css',
@@ -12,8 +13,8 @@ add_action('wp_enqueue_scripts', 'my_enqueue_scripts');
 // アイキャッチ画像を利用できるようにする
 add_theme_support('post-thumbnails');
 
-    // ヘッダー用のサイズ設定
-    add_image_size('masthead', 2560, 440, true);
+// ヘッダー用のサイズ設定
+add_image_size('masthead', 2560, 440, true);
 
 
 // ヘッダー、フッターのカスタムメニュー化
@@ -38,7 +39,8 @@ if (function_exists('register_sidebar')) {
 
 
 // ブログ、お知らせのBreadcrumbsにアーカイブページの項目を追加
-function insert_breadcrumb_item($breadcrumb_trail) {
+function insert_breadcrumb_item($breadcrumb_trail)
+{
     if (is_single()) {
         $breadcrumb = new bcn_breadcrumb();
         $breadcrumb->set_title('ブログ');
@@ -52,15 +54,16 @@ function insert_breadcrumb_item($breadcrumb_trail) {
 add_action('bcn_after_fill', 'insert_breadcrumb_item');
 
 
-// ブログの全投稿を取得
-function get_all_posts() {
+// 投稿を取得
+function get_all_posts($post_type)
+{
     $paged = (int) get_query_var('paged');
     $args = array(
         'posts_per_page' => 10,
         'paged' => $paged,
         'orderby' => 'post_date',
         'order' => 'DESC',
-        'post_type' => 'post',
+        'post_type' => $post_type,
         'post_status' => 'publish'
     );
     if (is_front_page()) {
@@ -68,4 +71,23 @@ function get_all_posts() {
     }
     $all_posts = new WP_Query($args);
     return $all_posts;
+}
+
+
+// pagenation
+function get_pagenation() {
+    if (is_page('blog')) {
+        $the_query = get_all_posts('post');
+    } elseif (is_post_type_archive('news')) {
+        $the_query = get_all_posts('news');
+    }
+    if ($the_query->max_num_pages > 1) {
+        echo paginate_links(array(
+            'base' => get_pagenum_link(1) . '%_%',
+            'format' => 'page/%#%/',
+            'current' => max(1, $paged),
+            'total' => $the_query->max_num_pages,
+            'prev_next' => false
+        ));
+    }
 }

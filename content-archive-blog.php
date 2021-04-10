@@ -1,13 +1,12 @@
 <ul>
     <?php
-    $the_query = get_all_posts();
+    $the_query = get_all_posts('post');
     if ($the_query->have_posts()) :
         while ($the_query->have_posts()) : $the_query->the_post();
     ?>
             <li>
                 <a class="blog-archive__item" href="<?php the_permalink(); ?>">
-                    <figure class="blog-archive__img">
-                        <?php the_post_thumbnail(); ?></figure>
+                    <figure class="blog-archive__img"><?php the_post_thumbnail(); ?></figure>
                     <span class="blog-archive__category">
                         <?php
                         $categories = get_the_category();
