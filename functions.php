@@ -100,4 +100,12 @@ function get_pagenation() {
             'prev_next' => false
         ));
     }
+// 抜粋文のデフォルト文字数の定義
+function cms_excerpt_more() {
+    return '...';
 }
+add_filter('excerpt_more', 'cms_excerpt_more');
+function cms_excerpt_length() {
+    return 60;
+}
+add_filter('excerpt_length', 'cms_excerpt_length', 999);
