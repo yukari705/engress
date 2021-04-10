@@ -3,7 +3,7 @@
 function my_enqueue_scripts() {
     wp_enqueue_style(
         'style',
-        get_template_directory_uri().'/css/style.css',
+        get_template_directory_uri() . '/css/style.css',
         array()
     );
 }
@@ -27,14 +27,30 @@ register_nav_menus(
 // ウィジェット機能を有効化
 if (function_exists('register_sidebar')) {
     register_sidebar(array(
-    'name' => 'サイドバー',
-    'id' => 'sidebar',
-    'before_widget' => '<aside>',
-    'after_widget' => '</aside>',
-    'before_title' => '<h2 class="sidebar__title">',
-    'after_title' => '</h2>'
+        'name' => 'サイドバー',
+        'id' => 'sidebar',
+        'before_widget' => '<aside>',
+        'after_widget' => '</aside>',
+        'before_title' => '<h2 class="sidebar__title">',
+        'after_title' => '</h2>'
     ));
 }
+
+
+// ブログ、お知らせのBreadcrumbsにアーカイブページの項目を追加
+function insert_breadcrumb($breadcrumb_trail) {
+    if (is_single()) {
+        $breadcrumb = new bcn_breadcrumb();
+        $breadcrumb->set_title('ブログ');
+        $breadcrumb->set_url(home_url('blog'));
+        $breadcrumb->set_linked(true);
+        $stuck = array_pop($breadcrumb_trail->breadcrumbs); // 「ブログ」を一時退避
+        $breadcrumb_trail->breadcrumbs[] = $breadcrumb; // 「ブログ」を追加
+        $breadcrumb_trail->breadcrumbs[] = $stuck; // 「ホーム」を戻す
+    }
+}
+add_action('bcn_after_fill', 'insert_breadcrumb');
+
 
 // ブログの全投稿を取得
 function get_all_posts() {
