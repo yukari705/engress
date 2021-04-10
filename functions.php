@@ -48,15 +48,15 @@ function get_main_title() {
 }
 
 
-// ブログ、お知らせのBreadcrumbsにアーカイブページの項目を追加
+// ブログのBreadcrumbsにアーカイブページの項目を追加
 function insert_breadcrumb_item($breadcrumb_trail)
 {
-    if (is_single()) {
+    if (is_single() && !is_singular('news')) {
         $breadcrumb = new bcn_breadcrumb();
         $breadcrumb->set_title('ブログ');
         $breadcrumb->set_url(home_url('blog'));
         $breadcrumb->set_linked(true);
-        $stuck = array_pop($breadcrumb_trail->breadcrumbs); // 「ブログ」を一時退避
+        $stuck = array_pop($breadcrumb_trail->breadcrumbs); // 「ホーム」を一時退避
         $breadcrumb_trail->breadcrumbs[] = $breadcrumb; // 「ブログ」を追加
         $breadcrumb_trail->breadcrumbs[] = $stuck; // 「ホーム」を戻す
     }
