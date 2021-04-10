@@ -15,7 +15,7 @@
   <?php wp_head(); ?>
 </head>
 
-<body>
+<body <?php body_class($class); ?>>
   <header class="header">
     <div class="header__inner">
       <div class="header__left">
@@ -23,7 +23,7 @@
         <nav class="header__nav">
           <?php
           wp_nav_menu(
-            array (
+            array(
               'theme_location' => 'place_global',
               'container' => false
             )
