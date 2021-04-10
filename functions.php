@@ -38,7 +38,7 @@ if (function_exists('register_sidebar')) {
 
 
 // ブログ、お知らせのBreadcrumbsにアーカイブページの項目を追加
-function insert_breadcrumb($breadcrumb_trail) {
+function insert_breadcrumb_item($breadcrumb_trail) {
     if (is_single()) {
         $breadcrumb = new bcn_breadcrumb();
         $breadcrumb->set_title('ブログ');
@@ -49,7 +49,7 @@ function insert_breadcrumb($breadcrumb_trail) {
         $breadcrumb_trail->breadcrumbs[] = $stuck; // 「ホーム」を戻す
     }
 }
-add_action('bcn_after_fill', 'insert_breadcrumb');
+add_action('bcn_after_fill', 'insert_breadcrumb_item');
 
 
 // ブログの全投稿を取得
