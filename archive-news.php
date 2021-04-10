@@ -2,8 +2,7 @@
 
 <section class="news-archive">
   <div class="section__inner">
-    <h2 class="section__title"><?php echo esc_html(get_post_type_object(get_post_type())->label); ?>
-一覧</h2>
+    <h2 class="section__title"><?php echo esc_html(get_post_type_object(get_post_type())->label); ?>一覧</h2>
     <ul class="news-archive__list">
       <?php
       $the_query = get_all_posts('news');
@@ -22,8 +21,6 @@
     </ul>
   </div><!-- /.section__inner -->
 </section><!-- /.news-archive -->
-<aside class="pagenation">
-  <?php get_pagenation(); ?>
-</aside>
+<?php get_template_part('pagination'); ?>
 
 <?php get_footer(); ?>

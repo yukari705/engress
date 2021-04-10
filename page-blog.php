@@ -6,7 +6,7 @@
         <?php get_template_part('content-archive-blog'); ?>
     </div><!-- /.section__inner -->
 </section><!-- /.blog-archive -->
-<aside class="pagenation">
-    <?php get_template_part('pagenation'); ?>
-</aside>
+
+<?php get_template_part('pagination'); ?>
+
 <?php get_footer(); ?>

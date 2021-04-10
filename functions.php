@@ -84,22 +84,6 @@ function get_all_posts($post_type)
 }
 
 
-// Pagenationを表示
-function get_pagenation() {
-    if (is_page('blog')) {
-        $the_query = get_all_posts('post');
-    } elseif (is_post_type_archive('news')) {
-        $the_query = get_all_posts('news');
-    }
-    if ($the_query->max_num_pages > 1) {
-        echo paginate_links(array(
-            'base' => get_pagenum_link(1) . '%_%',
-            'format' => 'page/%#%/',
-            'current' => max(1, $paged),
-            'total' => $the_query->max_num_pages,
-            'prev_next' => false
-        ));
-    }
 // 抜粋文のデフォルト文字数の定義
 function cms_excerpt_more() {
     return '...';
