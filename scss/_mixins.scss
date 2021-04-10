@@ -15,7 +15,7 @@
     transition: opacity .2s;
 
     &:hover {
-        opacity: .7;
+        opacity: .6;
     }
 }
 
@@ -25,7 +25,7 @@
     transition: background-color .2s;
 
     &:hover {
-        background: color.scale($bg, $lightness: 30%);
+        background: color.scale($bg, $lightness: 40%);
     }
 }
 
