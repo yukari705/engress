@@ -630,8 +630,9 @@ br.pc {
     }
 
     &__img {
-        width: 26%;
-        @include m.resize-img-parent(63%);
+        max-height: 150px;
+        width: 27%;
+        @include m.resize-img-parent(62.5%);
 
         img {
             @include m.resize-img-child;
@@ -760,8 +761,7 @@ br.pc {
     &__title {
         font-size: 1rem;
         font-weight: normal;
-        color: v.$text-color;
         text-decoration: underline;
+        @include m.link-txt(v.$text-color);
     }
-
-}
+}// .news-archive
