@@ -58,9 +58,13 @@
       <?php if (!is_single()) : ?>
         <div class="sub-masthead__title">
           <figure class="sub-masthead__img">
-            <?php if(is_post_type_archive('news')): ?>
-              <img src="<?php echo get_template_directory_uri(  ); ?>/images/masthead/news.png" alt="">
-            <?php else: ?>
+            <?php if (is_post_type_archive('news')) : ?>
+              <img src="<?php echo get_template_directory_uri(); ?>/images/masthead/news.png" alt="">
+            <?php elseif (is_archive()) :
+              $page_id = get_page_by_path('blog')->ID;
+              echo get_the_post_thumbnail($page_id);
+            ?>
+            <?php else : ?>
               <?php the_post_thumbnail('masthead'); ?>
             <?php endif; ?>
           </figure>
