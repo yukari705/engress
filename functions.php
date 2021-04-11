@@ -39,11 +39,15 @@ if (function_exists('register_sidebar')) {
 
 
 // ページのタイトルを取得
-function get_main_title() {
-    if (is_page()):
+function get_main_title()
+{
+    if (is_page()) :
         return get_the_title();
-    elseif (is_post_type_archive('news')):
+    elseif (is_post_type_archive('news')) :
         return get_post_type_object(get_post_type())->label;
+    elseif (is_archive()) :
+        $page_id = get_page_by_path('blog')->ID;
+        return get_the_title($page_id);
     endif;
 }
 
@@ -51,7 +55,7 @@ function get_main_title() {
 // ブログのBreadcrumbsにアーカイブページの項目を追加
 function insert_breadcrumb_item($breadcrumb_trail)
 {
-    if (is_single() && !is_singular('news')) {
+    if (is_single() || is_archive()) {
         $breadcrumb = new bcn_breadcrumb();
         $breadcrumb->set_title('ブログ');
         $breadcrumb->set_url(home_url('blog'));
@@ -85,11 +89,13 @@ function get_all_posts($post_type)
 
 
 // 抜粋文のデフォルト文字数の定義
-function cms_excerpt_more() {
+function cms_excerpt_more()
+{
     return '...';
 }
 add_filter('excerpt_more', 'cms_excerpt_more');
-function cms_excerpt_length() {
+function cms_excerpt_length()
+{
     return 60;
 }
 add_filter('excerpt_length', 'cms_excerpt_length', 999);
