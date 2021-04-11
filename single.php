@@ -39,8 +39,20 @@
       </aside>
       <aside class="category-list">
         <h2>カテゴリー</h2>
-
-      </aside>
+        <ul class="category-list__list">
+          <?php
+          $categories = get_categories();
+          foreach ($categories as $category) : ?>
+            <li class="category-list__item">
+              <a href="<?php echo esc_url(get_category_link($category->term_id)); ?>">
+                <?php
+                echo $category->name . ' (' .
+                  $category->count . ')'; ?>
+              </a>
+            </li><!-- /.category-list__item -->
+          <?php endforeach; ?>
+        </ul><!-- /.category-list__list -->
+      </aside><!-- /.category-list -->
     </div><!-- /.col2 -->
   </div><!-- /.section__inner -->
 </div><!-- /.post--blog -->
