@@ -610,6 +610,22 @@ br.pc {
     }
 }
 
+.category-list {
+    &__list {
+        padding-left: 30px;
+        list-style-type: disc;
+    }
+
+    &__item {
+        margin-bottom: 5px;
+
+        a {
+            @include m.link-txt(v.$text-color);
+            font-weight: bold;
+        }
+    }
+}
+
 /* BLOG ARCHIVE
 ----------------------------- */
 .blog-archive {
