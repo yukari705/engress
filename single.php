@@ -33,10 +33,25 @@
       </article>
       <aside class="recommend-article">
         <h2>おすすめの記事</h2>
+        <ul class="blog-archive tag">
+          <?php
+          $tag_posts = get_posts(array(
+            'post_type' => 'post', // 投稿タイプ
+            'tag'    => 'pickup', // タグをスラッグで指定する場合
+            'posts_per_page' => 3, // 表示件数
+            'orderby' => 'date', // 表示順の基準
+            'order' => 'DESC' // 昇順・降順
+          ));
+          if ($tag_posts) : foreach ($tag_posts as $post) : setup_postdata($post); ?>
+              <?php get_template_part('content-archive-blog'); ?>
+          <?php endforeach;
+          endif;
+          wp_reset_postdata(); ?>
+        </ul>
       </aside>
     </div><!-- /.col1 -->
     <div class="col2">
-<?php get_sidebar(); ?>
+      <?php get_sidebar(); ?>
     </div><!-- /.col2 -->
   </div><!-- /.section__inner -->
 </div><!-- /.post--blog -->
