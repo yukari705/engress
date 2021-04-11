@@ -461,6 +461,7 @@ br.pc {
         .section__inner {
             display: flex;
             justify-content: space-between;
+            padding-bottom: 40px;
         }
 
         .col1 {
@@ -734,6 +735,30 @@ br.pc {
             font-size: 12px;
         }
     }// &.top
+
+    &.tag {
+        li {
+            margin-bottom: 30px;
+        }
+
+        .blog-archive__img {
+            max-height: 130px;
+            width: 36%;
+        }
+
+        .blog-archive__body {
+            width: 60%;
+        }
+
+        .blog-archive__date {
+            margin-bottom: 20px;
+        }
+
+        .blog-archive__title {
+            margin-bottom: 30px;
+            font-size: 1.125rem;
+        }
+    }// &.tag
 }// .blog-archive
 
 .pagination {
