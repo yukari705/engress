@@ -156,7 +156,16 @@
   <div class="section__inner">
     <div class="blog-archive top">
       <h2>ブログ</h2>
-      <?php get_template_part('content-archive-blog'); ?>
+      <ul>
+        <?php
+        $the_query = get_all_posts('post');
+        if ($the_query->have_posts()) :
+          while ($the_query->have_posts()) : $the_query->the_post();
+            get_template_part('content-archive-blog');
+          endwhile;
+          wp_reset_postdata();
+        endif; ?>
+      </ul>
     </div><!-- /.blog-archive -->
     <div class="news-archive top">
       <h2>お知らせ</h2>
