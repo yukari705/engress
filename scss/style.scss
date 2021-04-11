@@ -608,6 +608,34 @@ br.pc {
     }
 }
 
+.relative-article {
+    &__list {
+        margin-bottom: 50px;
+    }
+
+    &__item {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 40px;
+        @include m.link-txt(v.$text-color);
+    }
+
+    figure {
+        width: 37%;
+        @include m.resize-img-parent(70%);
+
+        img {
+            @include m.resize-img-child;
+        }
+    }
+
+    p {
+        width: 55%;
+        font-size: 0.75rem;
+        text-decoration: underline;
+    }
+}// .relative-article
+
 .category-list {
     &__list {
         padding-left: 30px;
@@ -622,7 +650,7 @@ br.pc {
             font-weight: bold;
         }
     }
-}
+}// .category-list
 
 /* BLOG ARCHIVE
 ----------------------------- */
