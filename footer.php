@@ -1,5 +1,5 @@
 <footer class="footer">
- <?php if(!is_page('contact')): ?>
+ <?php if(!is_page('contact') && !is_page('thanks')): ?>
     <div class="footer__banner">
         <p>まずは無料で資料請求から</p>
         <a class="btn--request" href="<?php echo esc_url(home_url('contact')); ?>">資料請求</a>
