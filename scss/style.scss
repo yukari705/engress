@@ -338,7 +338,7 @@ br.pc {
     &__answer {
         padding: 20px 25px;
         background: #F8F8F8;
-        // display: none;
+        display: none;
     }
 }// .faq
 
@@ -347,7 +347,7 @@ br.pc {
 .footer {
     &__banner {
         padding: 60px 0 40px;
-        background: url(../images/footer-banner.png) center center no-repeat;
+        background: url(../images/masthead/contact.png) center center no-repeat;
         background-size: cover;
 
         p {
@@ -504,9 +504,6 @@ br.pc {
 
     &__date {
         text-align: right;
-    }
-
-    &__img {
     }
 
     &__content{

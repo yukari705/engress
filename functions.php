@@ -2,6 +2,14 @@
 // CSS, jsの読み込み
 function my_enqueue_scripts()
 {
+    wp_enqueue_script('jquery');
+    wp_enqueue_script(
+        'script_js',
+        get_template_directory_uri() . '/js/script.js',
+        array('jquery'),
+        false,
+        true
+    );
     wp_enqueue_style(
         'style',
         get_template_directory_uri() . '/css/style.css',
