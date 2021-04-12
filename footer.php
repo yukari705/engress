@@ -33,6 +33,7 @@
     <div class="footer__copyright">
         <p><small>&copy; 2020 Engress.</small></p>
     </div><!-- /.footer__copyright -->
+    <div class="dummy"></div>
 </footer>
 <?php wp_footer(); ?>
 </body>
