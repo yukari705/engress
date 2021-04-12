@@ -14,6 +14,7 @@
         width: 100%;
         max-width: 1280px;
         margin: auto;
+        padding: 10px;
         display: flex;
         justify-content: space-between;
         background: #fff;
@@ -27,7 +28,6 @@
 
     &__logo {
         width: 130px;
-        margin-left: 15px;
         display: block;
         @include m.resize-img-parent(42.5%);
         transition: opacity .2s;
@@ -58,6 +58,7 @@
     &__btn {
         &--request {
             @include m.btn-rectangle(v.$main-color);
+            margin-right: 10px;
         }
 
         &--contact {
