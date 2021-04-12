@@ -46,8 +46,9 @@ function get_main_title()
     elseif (is_archive()) :
         $page_id = get_page_by_path('blog')->ID;
         return get_the_title($page_id);
-    elseif (is_page('contact')) :
-        return get_the_title() . '・資料請求';
+    elseif (is_page('contact') || is_page('thanks')) :
+        $page_id = get_page_by_path('contact')->ID;
+        return get_the_title($page_id) . '・資料請求';
     elseif (is_page()) :
         return get_the_title();
     endif;
