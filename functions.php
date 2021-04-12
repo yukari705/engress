@@ -58,7 +58,10 @@ function get_main_title()
 // ブログのBreadcrumbsにアーカイブページの項目を追加
 function insert_breadcrumb_item($breadcrumb_trail)
 {
-    if (is_single() || is_archive()) {
+    if (
+        (is_single() && !is_singular('news')) ||
+        is_archive() && !is_post_type_archive('news')
+    ) {
         $breadcrumb = new bcn_breadcrumb();
         $breadcrumb->set_title('ブログ');
         $breadcrumb->set_url(home_url('blog'));
