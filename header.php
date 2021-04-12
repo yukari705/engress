@@ -64,9 +64,14 @@
               $page_id = get_page_by_path('blog')->ID;
               echo get_the_post_thumbnail($page_id);
             ?>
-            <?php else : ?>
-              <?php the_post_thumbnail('masthead'); ?>
-            <?php endif; ?>
+            <?php elseif (is_page('thanks')) :
+              $page_id = get_page_by_path('contact')->ID;
+              echo get_the_post_thumbnail($page_id);
+            ?>
+            <?php else :
+              the_post_thumbnail('masthead');
+            endif;
+            ?>
           </figure>
           <h1><?php echo get_main_title(); ?></h1>
         </div><!-- /.sub-masthead__title -->
