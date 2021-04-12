@@ -96,6 +96,8 @@
 /* TOP MASTHEAD
 ----------------------------- */
 .top-masthead {
+    min-height: 500px;
+    max-height: 700px;
     position: relative;
     background: url(../images/main.png) center top no-repeat;
     background-size: cover;
@@ -133,7 +135,6 @@
 }// .top-masthead
 
 .btn--request {
-    height: 60px;
     width: 260px;
     margin: 0 auto 20px;
     display: table;
@@ -155,8 +156,6 @@
 /* SUB MASTHEAD
 ----------------------------- */
 .sub-masthead {
-    background: #f8f8f8;
-
     &__title {
         position: relative;
 
@@ -171,21 +170,26 @@
     }
 
     &__img {
-        width: 100vw;
         @include m.resize-img-parent(17%);
+        min-height: 240px;
+        max-height: 340px;
 
         img {
             @include m.resize-img-child;
         }
     }
-}// .sub-masthead
 
-.breadcrumbs {
-    @include m.inner(15px);
-    font-size: 0.75rem;
+    &__breadcrumbs {
+        background: #f8f8f8;
 
-    a {
-        @include m.link-txt(v.$text-color);
-        text-decoration: underline;
+        div {
+        @include m.inner(15px);
+        font-size: 0.75rem;
+        }
+
+        a {
+            @include m.link-txt(v.$text-color);
+            text-decoration: underline;
+        }
     }
-}
+}// .sub-masthead
