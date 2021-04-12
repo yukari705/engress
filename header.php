@@ -76,10 +76,12 @@
           <h1><?php echo get_main_title(); ?></h1>
         </div><!-- /.sub-masthead__title -->
       <?php endif; ?>
-      <div class="breadcrumbs" typeof="BreadcrumbList" vocab="https://schema.org/">
-        <?php if (function_exists('bcn_display')) {
-          bcn_display();
-        } ?>
-      </div><!-- /.breadcrumbs -->
+      <div class="sub-masthead__breadcrumbs">
+        <div class="breadcrumbs" typeof="BreadcrumbList" vocab="https://schema.org/">
+          <?php if (function_exists('bcn_display')) {
+            bcn_display();
+          } ?>
+        </div>
+      </div><!-- /.sub-masthead__breadcrumbs -->
     </section><!-- /.sub-masthead -->
   <?php endif; ?>
