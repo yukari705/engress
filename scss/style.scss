@@ -854,3 +854,59 @@ br.pc {
         }
     }// .top
 }// .news-archive
+
+/* CONTACT
+----------------------------- */
+.contact {
+    .section__inner {
+        max-width: 700px;
+    }
+
+    .contact-form {
+        p {
+            margin-bottom: 20px;
+        }
+
+        &__label {
+            display: block;
+            margin-bottom: 5px;
+
+            span.bold {
+                font-weight: bold;
+            }
+        }
+
+        input[type=text],
+        input[type=email],
+        textarea {
+            width: 100%;
+            padding: 15px;
+            border: 1px solid v.$text-color;
+            font-size: 0.75rem;
+        }
+
+        textarea {
+            height: 240px;
+            resize: none;
+        }
+
+        &__agreement {
+            text-align: center;
+            margin-bottom: 40px;
+
+            p {
+                margin-bottom: 10px;
+            }
+
+            a {
+                @include m.link-txt(v.$main-color);
+            }
+        }
+
+        &__submit {
+            @include m.btn-rectangle(v.$text-color);
+            width: 200px;
+            margin: auto;
+        }
+    }//.contact-form
+}
