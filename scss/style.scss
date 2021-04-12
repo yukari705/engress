@@ -909,4 +909,23 @@ br.pc {
             margin: auto;
         }
     }//.contact-form
-}
+}// .contact
+
+.thanks {
+    .section__inner {
+        padding: 80px 0;
+    }
+
+    &__message {
+        text-align: center;
+        p {
+            margin-bottom: 80px;
+        }
+
+        a {
+            display: block;
+            @include m.link-txt(v.$text-color);
+            text-decoration: underline;
+        }
+    }
+}//.thanks
