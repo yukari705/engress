@@ -63,7 +63,7 @@ function get_main_title()
 }
 
 
-// ブログのBreadcrumbsにアーカイブページの項目を追加
+// Breadcrumbsのカスタマイズ（項目追加、項目名変更）
 function insert_breadcrumb_item($breadcrumb_trail)
 {
     if (
@@ -77,6 +77,11 @@ function insert_breadcrumb_item($breadcrumb_trail)
         $stuck = array_pop($breadcrumb_trail->breadcrumbs); // 「ホーム」を一時退避
         $breadcrumb_trail->breadcrumbs[] = $breadcrumb; // 「ブログ」を追加
         $breadcrumb_trail->breadcrumbs[] = $stuck; // 「ホーム」を戻す
+    } elseif (is_page('fee')) {
+        $breadcrumb = new bcn_breadcrumb();
+        $breadcrumb->set_title('料金体系');
+        $breadcrumb_trail->breadcrumbs[0] = $breadcrumb; // 最後の項目を「料金体系」に変更
+        return $breadcrumb_trail;
     }
 }
 add_action('bcn_after_fill', 'insert_breadcrumb_item');
