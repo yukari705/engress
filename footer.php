@@ -1,4 +1,5 @@
 <footer class="footer">
+ <?php if(!is_page('contact')): ?>
     <div class="footer__banner">
         <p>まずは無料で資料請求から</p>
         <a class="btn--request" href="<?php echo esc_url(home_url('contact')); ?>">資料請求</a>
@@ -9,6 +10,7 @@
         <span>0123-456-7890</span>
         <p>平日 08:00~20:00</p>
     </div><!-- /.footer__tel -->
+    <?php endif; ?>
     <div class="footer__nav">
         <div class="footer__inner">
             <nav>
