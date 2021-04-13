@@ -74,3 +74,9 @@
     background: $color;
     color: #fff;
 }
+
+@mixin mq($size) {
+    @media (max-width: $size) {
+        @content;
+    }
+}
