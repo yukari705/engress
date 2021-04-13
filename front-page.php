@@ -42,7 +42,7 @@
       <li class="features__item">
         <div>
           <p class="features__number">特長 ３</p>
-          <h3>平均3ヶ月でTOEFL iBT20点アップ</h3>
+          <h3>平均3ヶ月で<br class="md">TOEFL iBT20点アップ</h3>
           <p>
             Engressは高校生からサラリーマンまで様々な年齢層の方々が通われていますが、完全オーダーメイドのカリキュラムで柔軟に対応しているため、平均3ヶ月でTOEFLスコアを20点アップさせています。
           </p>
@@ -99,7 +99,7 @@
       <li class="flow__item">
         <div class="flow__number"><span>03</span></div>
         <dl>
-          <dt>学習プランのご提供</dt>
+          <dt>学習プランの<br class="md">ご提供</dt>
           <div></div>
           <dd>目標達成のために最適な学習プランをご提案致します。</dd>
         </dl>
