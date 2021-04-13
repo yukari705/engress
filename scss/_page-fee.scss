@@ -10,6 +10,10 @@
         display: table;
         margin: 60px auto 40px;
 
+        @include m.mq(v.$md) {
+            margin-top: 0;
+        }
+
         div {
             @include m.txt-bg(290px);
             display: table-cell;
@@ -34,12 +38,15 @@
 .fee-list {
     .section__title {
         margin-bottom: 100px;
+
+        @include m.mq(v.$md) {
+            margin-bottom: 80px;
+        }
     }
 
     &__list {
         display: flex;
         justify-content: space-between;
-        margin-top: 100px;
     }
 
     &__item {
@@ -92,6 +99,10 @@
         padding: 0 10px 80px 40px;
         list-style-image: url(../images/icon-check.png);
         text-align: left;
+
+        @include m.mq(v.$md) {
+            padding-bottom: 40px;
+        }
 
         li {
             margin-bottom: 10px;

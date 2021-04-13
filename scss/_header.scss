@@ -200,8 +200,12 @@
         background: #f8f8f8;
 
         div {
-        @include m.inner(15px);
-        font-size: 0.75rem;
+            @include m.inner(15px);
+            font-size: 0.75rem;
+
+            @include m.mq(v.$md) {
+                padding: 15px 2%;
+            }
         }
 
         a {
