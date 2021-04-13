@@ -1,6 +1,6 @@
             <li>
                 <a class="blog-archive__item" href="<?php the_permalink(); ?>">
-                    <figure class="blog-archive__img"><?php the_post_thumbnail(); ?></figure>
+                    <figure class="blog-archive__img"><img src="<?php echo get_the_post_thumbnail_url(); ?>"></figure>
                     <span class="blog-archive__category">
                         <?php
                         $categories = get_the_category();

@@ -23,7 +23,7 @@
               <?php wp_social_bookmarking_light_output_e(); ?>
               <p class="post__date"><?php the_time('Y-m-d'); ?></p>
             </div>
-            <figure class="post__img"><?php the_post_thumbnail(); ?></figure>
+            <figure class="post__img"><img src="<?php echo get_the_post_thumbnail_url(); ?>"></figure>
             <div class="post__content"><?php the_content(); ?>
             </div>
         <?php

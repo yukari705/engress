@@ -17,9 +17,7 @@
         if ($count >= 1) : foreach ($cat_posts as $post) : setup_postdata($post); ?>
                 <li>
                     <a class="relative-article__item" href="<?php the_permalink() ?>">
-
-                        <figure><?php the_post_thumbnail(); ?></figure>
-
+                        <figure><img src="<?php echo get_the_post_thumbnail_url(); ?>"></figure>
                         <p><?php the_title(); ?></p>
                     </a>
                 </li>
