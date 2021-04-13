@@ -35,13 +35,32 @@ ul {
     list-style: none;
 }
 
-br.sp,
-br.tb {
+br.sm {
     display: none;
+
+    @include m.mq(v.$sm) {
+        display: block;
+    }
+}
+
+br.md {
+    display: none;
+
+    @include m.mq(v.$md) {
+        display: block;
+    }
 }
 
 br.pc {
     display: block;
+
+    @include m.mq(v.$md) {
+        display: none;
+    }
+
+    @include m.mq(v.$sm) {
+        display: none;
+    }
 }
 
 /* INTRO
@@ -54,7 +73,10 @@ br.pc {
         margin-bottom: 40px;
         font-size: 2.25rem;
         color: #fff;
-        // text-align: center;
+
+        @include m.mq(v.$md) {
+            font-size: 2rem;
+        }
     }
 
     ul {
@@ -87,6 +109,11 @@ br.pc {
             border: 5px solid v.$text-color;
         }
 
+        @include m.mq(v.$md) {
+            width: 90%;
+            margin: auto;
+        }
+
         h2 {
             margin-bottom: 20px;
             color: v.$text-color;
@@ -106,6 +133,10 @@ br.pc {
 .section {
     &__inner {
         @include m.inner;
+
+        @include m.mq(v.$md) {
+            padding: 50px 2%;
+        }
     }
 
     &__title {
@@ -118,6 +149,10 @@ br.pc {
 .home {
     .section__title {
         font-size: 2.25rem;
+
+        @include m.mq(v.$md) {
+            font-size: 2rem;
+        }
     }
 }
 
@@ -205,6 +240,10 @@ br.pc {
     .section__title {
         margin-bottom: 100px;
         color: #fff;
+
+        @include m.mq(v.$md) {
+            margin-bottom: 40px;
+        }
     }
 
     &__list {
@@ -221,6 +260,10 @@ br.pc {
         margin-bottom: 10px;
         color: #fff;
         font-weight: bold;
+
+        @include m.mq(v.$md) {
+            min-height: 80px;
+        }
     }
 
     &__img {
@@ -269,9 +312,15 @@ br.pc {
         display: flex;
         background: #F8F8F8;
 
+        @include m.mq(v.$md) {
+            height: 80px;
+        }
+
         dl {
             display: flex;
+            justify-content: space-between;
             align-items: center;
+            width: calc(100% - 65px);
 
             div {
                 height: 50%;
@@ -279,21 +328,30 @@ br.pc {
             }
 
             dt {
-                min-width: 215px;
+                width: 26%;
                 padding: 0 20px;
                 font-size: 1.125rem;
                 font-weight: bold;
+
+                // @include m.mq(v.$md) {
+                //     padding: 20px 10px;
+                // }
             }
 
             dd {
+                width: 74%;
                 margin-left: 60px;
+
+                @include m.mq(v.$md) {
+                    margin-left: 30px;
+                }
             }
         }
     }// &__item
 
     &__number {
-        height: 100%;
         width: 65px;
+        height: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -352,16 +410,29 @@ br.pc {
         background: url(../images/masthead/contact.png) center center no-repeat;
         background-size: cover;
 
+        @include m.mq(v.$md) {
+            padding: 30px;
+        }
+
         p {
             margin-bottom: 15px;
             color: #fff;
             font-size: 2rem;
             font-weight: bold;
             text-align: center;
+
+            @include m.mq(v.$md) {
+                margin-bottom: 10px;
+                font-size: 1.75rem;
+            }
         }
 
         .btn--request {
             line-height: 50px;
+
+            @include m.mq(v.$md) {
+                margin-bottom: 10px;
+            }
         }
     }// &__banner
 
@@ -373,6 +444,10 @@ br.pc {
             margin: 10px 20px;
             display: inline-block;
             font-size: 2rem;
+
+            @include m.mq(v.$md) {
+                font-size: 1.75rem;
+            }
         }
 
         p {
@@ -390,6 +465,10 @@ br.pc {
         @include m.inner(30px);
         display: flex;
         justify-content: space-between;
+
+        @include m.mq(v.$md) {
+            padding: 30px 2%;
+        }
     }
 
     nav ul {
@@ -414,6 +493,10 @@ br.pc {
     &__right {
         margin-bottom: 30px;
         color: #fff;
+
+        @include m.mq(v.$md) {
+            margin-bottom: 0;
+        }
 
         figure {
             width: 200px;
@@ -447,6 +530,10 @@ br.pc {
         max-width: 900px;
         margin: auto;
         background: #fff;
+
+        @include m.mq(v.$md) {
+            padding: 0 2%;
+        }
 
         p {
             text-align: right;
@@ -735,9 +822,14 @@ br.pc {
 
         .blog-archive__img {
             width: 35%;
+            max-height: 110px;
 
             &::before {
                 padding-top: 73%;
+            }
+
+            @include m.mq(v.$md) {
+                max-height: 90px;
             }
         }
 
@@ -817,6 +909,10 @@ br.pc {
         justify-content: space-between;
         padding-top: 30px;
         padding-bottom: 90px;
+
+        @include m.mq(v.$md) {
+            padding-bottom: 40px;
+        }
     }
 
     h2 {
@@ -874,6 +970,7 @@ br.pc {
         }
 
         .news-archive__date {
+            width: 100%;
             margin-right: 0;
             margin-bottom: 10px;
             font-size: 0.75rem;
