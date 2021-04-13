@@ -41,6 +41,7 @@
       </div><!-- /.header__right -->
       <button type="button" id="js-hamburger" class="btn--hamburger" area-controls="js-header-nav" area-expanded="false" area-label="メニューを開閉する">
         <span class="hamburger__line"></span>
+      </button><!-- /.btn--hamburger -->
     </div><!-- /.header__inner -->
   </header>
 

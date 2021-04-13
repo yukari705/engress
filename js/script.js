@@ -39,22 +39,22 @@ jQuery(function ($) {
     // ScrollReveal().reveal('.fade-up', fadeUp);
     // ScrollReveal().reveal('.fade-up-delay', fadeUpDelay);
 
-    // /* HAMBURGER MENU */
-    // function drawerClose() {
-    //     $('#js-hamburger').attr('area-expanded', 'false');
-    //     $('#js-header-nav').attr('area-hidden', 'true');
-    // }
+    /* HAMBURGER MENU */
+    function drawerClose() {
+        $('#js-hamburger').attr('area-expanded', 'false');
+        $('#js-header-nav').attr('area-hidden', 'true');
+    }
 
-    // $('#js-hamburger').click(function() {
-    //     $('body').toggleClass('is-drawerActive');
+    $('#js-hamburger').click(function() {
+        $('body').toggleClass('is-drawerActive');
 
-    //     if ($(this).attr('area-expanded') == 'false') {
-    //         $(this).attr('area-expanded', 'true');
-    //         $('#js-header-nav').attr('area-hidden', 'false');
-    //     } else {
-    //         drawerClose();
-    //     }
-    // });
+        if ($(this).attr('area-expanded') == 'false') {
+            $(this).attr('area-expanded', 'true');
+            $('#js-header-nav').attr('area-hidden', 'false');
+        } else {
+            drawerClose();
+        }
+    });
 
     /* FAQ
     ----------------------------- */

@@ -6,12 +6,16 @@
 /* HEADER
 ----------------------------- */
 .header {
-    height: 80px;
     width: 100%;
+    height: 80px;
+
+    @include m.mq(v.$sm) {
+        height: 60px;
+    }
 
     &__inner {
-        height: 100%;
         width: 100%;
+        height: 100%;
         max-width: 1280px;
         margin: auto;
         padding: 10px;
@@ -24,6 +28,21 @@
     &__right {
         display: flex;
         align-items: center;
+    }
+
+    &__right {
+        @include m.mq(v.$sm) {
+            flex-direction: column;
+            justify-content: center;
+            width: 100%;
+            height: 50vh;
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            z-index: 10;
+            transition: all .3s;
+            transform: translateX(100vw);
+        }
     }
 
     &__logo {
@@ -53,7 +72,35 @@
                 @include m.link-txt(v.$text-color);
             }
         }
-    }
+
+        @include m.mq(v.$sm) {
+            width: 100%;
+            height: 100vh;
+            padding: 100px 10% 0;
+            position: fixed;
+            top: 0;
+            right: 0;
+            z-index: 10;
+            transform: translateX(100vw);
+            background: #FFFFFF;
+            transition: all .3s;
+
+            ul {
+                flex-direction: column;
+
+                li {
+                    margin: 0;
+                    padding: 20px 10px;
+                    border-bottom: 1px solid #B4B4B4;
+
+                    a {
+                        margin: 0;
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+    }// &__nav
 
     &__btn {
         &--request {
@@ -61,12 +108,25 @@
             margin-right: 10px;
 
             @include m.mq(v.$md) {
-                display: none;
+                margin-right: 0;
+                margin-bottom: 20px;
             }
         }
 
         &--contact {
             @include m.btn-rectangle(v.$text-color);
+
+            @include m.mq(v.$sm) {
+            }
+        }
+
+        &--request,
+        &--contact {
+            z-index: 20;
+
+            @include m.mq(v.$sm) {
+                width: 80vw;
+            }
         }
     }
 }// .header
@@ -100,6 +160,85 @@
         }
     }
 }// .info
+
+.btn--hamburger {
+    display: none;
+
+    @include m.mq(v.$sm) {
+        width: 60px;
+        height: 60px;
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 30;
+        appearance: none;
+        outline: none;
+        cursor: pointer;
+
+        &[area-expanded="true"] {
+            .hamburger__line {
+                background-color: rgba(255, 255, 255, 0);
+
+                &::before,
+                &::after {
+                top: 0;
+                background-color: v.$text-color;
+                }
+
+                &::before {
+                    -webkit-transform: rotate(45deg);
+                        -ms-transform: rotate(45deg);
+                            transform: rotate(45deg);
+                }
+
+                &::after {
+                    -webkit-transform: rotate(-45deg);
+                        -ms-transform: rotate(-45deg);
+                            transform: rotate(-45deg);
+                }
+            }
+        }
+
+        .hamburger__line {
+            position: absolute;
+            top: 50%;
+            left: 15px;
+            width: 30px;
+            height: 2px;
+            background-color: v.$text-color;
+            -webkit-transition: all .3s ease-in-out;
+                    transition: all .3s ease-in-out;
+
+            &::before,
+            &::after {
+                position: absolute;
+                display: block;
+                width: 100%;
+                height: 100%;
+                background-color: inherit;
+                content: '';
+                -webkit-transition: transform .3s ease-in-out;
+                        transition: transform .3s ease-in-out;
+            }
+        }
+
+        .hamburger__line::before {
+            top: -10px;
+        }
+        .hamburger__line::after {
+            top: 10px;
+        }
+    }
+}// .btn--hamburger
+
+.is-drawerActive {
+    .header__nav,
+    .header__right {
+        transform: translateX(0px);
+        transition: .3s;
+    }
+}// .is-drawerActive
 
 /* TOP MASTHEAD
 ----------------------------- */
@@ -183,6 +322,7 @@
             transform: translate(-50%, -50%);
             color: #fff;
             font-size: 2rem;
+            text-align: center;
         }
     }
 
