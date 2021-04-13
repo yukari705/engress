@@ -39,6 +39,8 @@
         <a class="header__btn--request" href="<?php echo esc_url(home_url('contact')); ?>">資料請求</a>
         <a class="header__btn--contact" href="<?php echo esc_url(home_url('contact')); ?>">お問い合わせ</a>
       </div><!-- /.header__right -->
+      <button type="button" id="js-hamburger" class="btn--hamburger" area-controls="js-header-nav" area-expanded="false" area-label="メニューを開閉する">
+        <span class="hamburger__line"></span>
     </div><!-- /.header__inner -->
   </header>
 
