@@ -111,7 +111,7 @@ br.pc {
             white-space: nowrap;
 
             @include m.mq(v.$sm) {
-                flex: 0 0 40%;
+                // flex: 0 0 30%;
                 margin-bottom: 15px;
                 font-size: 0.875rem;
             }
@@ -221,9 +221,9 @@ br.pc {
             width: 55.5%;
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
 
             h3 {
+                margin-bottom: 30px;
                 font-size: 1.625rem;
 
                 @include m.mq(v.$sm) {
@@ -258,11 +258,12 @@ br.pc {
 
     &__number {
         @include m.txt-bg($color: v.$main-color);
+        margin-bottom: 30px;
         padding: 10px 25px;
         font-size: 0.75rem;
         white-space: nowrap;
 
-        @include m.mq(v.$sm) {
+        @include m.mq(v.$md) {
             margin-bottom: 10px;
         }
     }
@@ -415,7 +416,7 @@ br.pc {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            width: calc(100% - 65px);
+            width: 100%;
 
             @include m.mq(v.$sm) {
                 flex-direction: column;
@@ -444,6 +445,7 @@ br.pc {
 
                 @include m.mq(v.$md) {
                     width: 30%;
+                    padding: 0 15px;
                 }
 
                 @include m.mq(v.$sm) {
@@ -455,18 +457,18 @@ br.pc {
 
             dd {
                 width: 74%;
-                margin-left: 60px;
+                padding-left: 60px;
+                padding-right: 10px;
 
                 @include m.mq(v.$md) {
                     width: 70%;
-                    margin-left: 30px;
+                    padding-left: 20px;
                 }
 
                 @include m.mq(v.$sm) {
                     width: 100%;
-                    margin: 0;
+                    padding: 0;
                 }
-
             }
         }
     }// &__item
@@ -477,6 +479,10 @@ br.pc {
         justify-content: center;
         align-items: center;
         background: v.$main-color;
+
+        @include m.mq(v.$md) {
+            width: 55px;
+        }
 
         span {
             color: #fff;
@@ -671,6 +677,10 @@ br.pc {
                 height: 50px;
                 margin-right: 15px;
                 margin-bottom: 0;
+            }
+
+            img {
+                object-fit: contain;
             }
         }
     }// &__right
@@ -1069,6 +1079,7 @@ br.pc {
         top: 0;
         left: 0;
         font-size: 12px;
+        white-space: nowrap;
     }
 
     &__body {
