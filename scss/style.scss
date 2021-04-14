@@ -13,7 +13,7 @@ html {
     box-sizing: border-box;
 
     @include m.mq(v.$md) {
-        font-size: 13px;
+        font-size: 14px;
     }
 }
 
@@ -22,7 +22,7 @@ html {
 }
 
 body {
-    font-family: "Yu Gothic", "YuGothic", sans-serif;
+    font-family: "Yu Gothic", "YuGothic", "游ゴシック", 'Noto Sans JP', sans-serif;
     color: v.$text-color;
 }
 
@@ -98,6 +98,7 @@ br.pc {
         justify-content: center;
 
         @include m.mq(v.$sm) {
+            justify-content: space-between;
             margin-bottom: 50px;
         }
 
@@ -107,9 +108,10 @@ br.pc {
             font-weight: bold;
             line-height: 2;
             color: #fff;
+            white-space: nowrap;
 
             @include m.mq(v.$sm) {
-                margin: 10px auto;
+                margin: 0;
                 font-size: 0.875rem;
             }
         }
@@ -257,6 +259,7 @@ br.pc {
         @include m.txt-bg($color: v.$main-color);
         padding: 10px 25px;
         font-size: 0.75rem;
+        white-space: nowrap;
 
         @include m.mq(v.$sm) {
             margin-bottom: 10px;
@@ -505,6 +508,10 @@ br.pc {
 
         span {
             font-size: 2.5rem;
+
+            @include m.mq(v.$sm) {
+                font-size: 2rem;
+            }
         }
     }
 
@@ -703,10 +710,6 @@ br.pc {
         }
     }// &__copyright
 }// .footer
-
-.dummy {
-    height: 100px;
-}
 
 /* POST
 ----------------------------- */
@@ -956,7 +959,6 @@ br.pc {
             max-width: 500px;
             margin: auto;
             margin-bottom: 40px;
-
         }
     }
 
@@ -988,6 +990,7 @@ br.pc {
 
         @include m.mq(v.$sm) {
             width: 100%;
+            font-size: 1rem;
         }
     }
 }// .relative-article
@@ -1223,6 +1226,10 @@ br.pc {
         margin-bottom: 15px;
         padding: 0;
         border: none;
+
+        @include m.mq(v.$sm) {
+            min-height: 70px;
+        }
     }
 
     .news-archive__date {

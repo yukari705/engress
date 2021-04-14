@@ -13,6 +13,8 @@
   <link rel="stylesheet" type="text/css" href="https://unpkg.com/ress/dist/ress.min.css">
 
   <!-- CSS -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
   <?php if (is_page('fee')) : ?>
     <link rel="stylesheet" href="https://unpkg.com/scroll-hint@latest/css/scroll-hint.css">
   <?php endif; ?>
@@ -24,7 +26,7 @@
   <header class="header">
     <div class="header__inner">
       <div class="header__left">
-        <a class="header__logo" href="/"><img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" alt=""></a>
+        <a class="header__logo" href="<?php echo esc_url(home_url()); ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" alt=""></a>
         <nav class="header__nav">
           <?php
           wp_nav_menu(

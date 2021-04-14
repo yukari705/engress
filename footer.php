@@ -35,7 +35,6 @@
     <div class="footer__copyright">
         <p><small>&copy; 2020 Engress.</small></p>
     </div><!-- /.footer__copyright -->
-    <div class="dummy"></div>
 </footer>
 <?php if (is_page('fee')) : ?>
     <script src="https://unpkg.com/scroll-hint@latest/js/scroll-hint.min.js"></script>
