@@ -110,6 +110,7 @@
     &__name {
         @include m.txt-bg(100%);
         padding: 20px;
+        font-size: 16px;
         font-weight: bold;
     }
 

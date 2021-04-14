@@ -98,8 +98,8 @@ br.pc {
         justify-content: center;
 
         @include m.mq(v.$sm) {
-            justify-content: space-between;
-            margin-bottom: 50px;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
         }
 
         li {
@@ -111,7 +111,8 @@ br.pc {
             white-space: nowrap;
 
             @include m.mq(v.$sm) {
-                margin: 0;
+                flex: 0 0 40%;
+                margin-bottom: 15px;
                 font-size: 0.875rem;
             }
         }
@@ -276,6 +277,10 @@ br.pc {
             font-size: 1.625rem;
             font-weight: bold;
             text-align: center;
+
+            @include m.mq(v.$sm) {
+                font-size: 1.375rem;
+            }
         }
 
         @include m.mq(v.$sm) {
@@ -502,7 +507,7 @@ br.pc {
         cursor: pointer;
 
         h3 {
-            font-size: 1rem;
+            font-size: 16px;
             font-weight: normal;
         }
 
@@ -1197,6 +1202,10 @@ br.pc {
 
     .blog-archive__title {
         font-size: 1rem;
+
+        @include m.mq(v.$sm) {
+            font-size: 1.125rem;
+        }
     }
 
     .blog-archive__date {
@@ -1281,7 +1290,7 @@ br.pc {
     }
 
     &__title {
-        font-size: 1rem;
+        font-size: 16px;
         font-weight: normal;
         text-decoration: underline;
         @include m.link-txt(v.$text-color);

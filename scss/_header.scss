@@ -129,6 +129,7 @@
 
             @include m.mq(v.$sm) {
                 width: 80vw;
+                font-size: 18px;
             }
         }
     }
