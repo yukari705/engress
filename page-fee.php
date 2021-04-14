@@ -16,18 +16,20 @@
 <section class="fee-list">
   <div class="section__inner">
     <h2 class="section__title">料金表</h2>
-    <ul class="fee-list__list">
-      <?php
-      $courses = array('course1', 'course2', 'course3', 'course4');
-      foreach ($courses as $course) :
-        if (have_rows($course)) :
-          while (have_rows($course)) : the_row();
-            get_template_part('content-fee');
-          endwhile;
-        endif;
-      endforeach;
-      ?>
-    </ul><!-- /.fee-list__list -->
+    <div class="fee-list__wrapper js-scrollable">
+      <ul class="fee-list__list">
+        <?php
+        $courses = array('course1', 'course2', 'course3', 'course4');
+        foreach ($courses as $course) :
+          if (have_rows($course)) :
+            while (have_rows($course)) : the_row();
+              get_template_part('content-fee');
+            endwhile;
+          endif;
+        endforeach;
+        ?>
+      </ul><!-- /.fee-list__list -->
+    </div>
   </div><!-- /.section__inner -->
 </section><!-- /.fee-list-->
 

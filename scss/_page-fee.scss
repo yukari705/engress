@@ -22,6 +22,12 @@
             font-size: 1.375rem;
             font-weight: bold;
             text-align: center;
+
+            @include m.mq(v.$sm) {
+                width: fit-content;
+                height: 60px;
+                padding: 3%;
+            }
         }
 
         span {
@@ -30,6 +36,11 @@
             padding: 0 35px;
             font-size: 2.5rem;
             font-weight: bold;
+
+            @include m.mq(v.$sm) {
+                padding: 0 10px;
+                font-size: 2rem;
+            }
         }
     }// &__formula
 }// .fee-structure
@@ -38,40 +49,56 @@
 ----------------------------- */
 .fee-list {
     .section__title {
-        margin-bottom: 100px;
+        margin-bottom: 70px;
 
         @include m.mq(v.$md) {
-            margin-bottom: 80px;
+            margin-bottom: 40px;
+        }
+    }
+
+    &__wrapper {
+        @include m.mq(v.$sm) {
+            overflow-x: scroll;
         }
     }
 
     &__list {
         display: flex;
         justify-content: space-between;
+
+        @include m.mq(v.$sm) {
+            width: 600px;
+            margin: auto;
+        }
+    }
+
+    &__recommend {
+        height: 35px;
+        padding-top: 15px;
+        z-index: 10;
+        background: #fff;
+        border: 1px solid #fff;
+        box-shadow: 0 0 0 2px #fff;
+
+        &.is-show {
+            border: none;
+            box-shadow: none;
+            @include m.txt-bg(100%, v.$main-color);
+            font-weight: bold;
+        }
     }
 
     &__item {
         flex: 0 0 calc((100% - 15px) / 4);
-        border: 1px solid v.$text-color;
+        box-shadow: 0px 0px 0px 1px v.$text-color inset;
         text-align: center;
 
         &.recommend {
-            border-color: v.$main-color;
+            box-shadow: 0px 0px 0px 1px v.$main-color inset;
             position: relative;
 
             .fee-list__name {
                 background: v.$main-color;
-
-                &::before {
-                    @include m.txt-bg(100%, v.$main-color);
-                    content: 'おすすめ';
-                    height: 35px;
-                    padding-top: 15px;
-                    position: absolute;
-                    top: -35px;
-                    left: 0;
-                    box-shadow: 0 0 0 1px v.$main-color;
-                }
             }
 
             .fee-list__fee p {
@@ -105,8 +132,13 @@
             padding-bottom: 40px;
         }
 
+        @include m.mq(v.$sm) {
+            padding-bottom: 10px;
+        }
+
         li {
             margin-bottom: 10px;
+            white-space: normal;
         }
     }
 }// .fee-list

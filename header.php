@@ -12,6 +12,11 @@
   <!-- RESET CSS -->
   <link rel="stylesheet" type="text/css" href="https://unpkg.com/ress/dist/ress.min.css">
 
+  <!-- CSS -->
+  <?php if (is_page('fee')) : ?>
+    <link rel="stylesheet" href="https://unpkg.com/scroll-hint@latest/css/scroll-hint.css">
+  <?php endif; ?>
+
   <?php wp_head(); ?>
 </head>
 

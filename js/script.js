@@ -45,7 +45,7 @@ jQuery(function ($) {
         $('#js-header-nav').attr('area-hidden', 'true');
     }
 
-    $('#js-hamburger').click(function() {
+    $('#js-hamburger').click(function () {
         $('body').toggleClass('is-drawerActive');
 
         if ($(this).attr('area-expanded') == 'false') {
@@ -55,6 +55,25 @@ jQuery(function ($) {
             drawerClose();
         }
     });
+
+    /* FEE
+    ----------------------------- */
+    $('.fee-list__recommend.is-show').html('おすすめ');
+    // $(window).load(function () {
+    //     var myTarget = $(".recommend");
+    //     var myIndex = $(".fee-list__list li").index(myTarget);
+    //     var scrollvalue = 20 * myIndex;
+    //     $('.fee-list__wrapper').scrollLeft(scrollvalue);
+    // });
+    if (document.URL.match(/fee/)) {
+        new ScrollHint('.js-scrollable', {
+            remainingTime: -1,
+            suggestiveShadow: true,
+            i18n: {
+                scrollable: 'スクロールできます'
+            }
+        });
+    }
 
     /* FAQ
     ----------------------------- */

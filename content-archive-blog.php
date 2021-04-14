@@ -9,7 +9,7 @@
                     </span>
                     <div class="blog-archive__body">
                         <p class="blog-archive__date"><?php the_time('Y-m-d'); ?></p>
-                        <h1 class="blog-archive__title"><?php the_title(); ?></h1>
+                        <h1 class="blog-archive__title"><?php echo wp_trim_words( get_the_title(), 50, '...' ); ?></h1>
                         <?php if (is_page('blog') || is_archive()) : ?>
                             <p><?php echo get_the_excerpt(); ?></p>
                         <?php endif; ?>

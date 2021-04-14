@@ -3,6 +3,10 @@
     echo 'recommend';
 endif; ?>">
     <dl>
+        <div class="fee-list__recommend
+        <?php if (get_sub_field('course_recommend')) :
+    echo 'is-show';
+endif; ?>"></div>
         <dt class="fee-list__name">
             <?php the_sub_field('course_name'); ?>プラン
         </dt>

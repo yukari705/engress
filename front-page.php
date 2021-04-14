@@ -2,14 +2,14 @@
 
 <section class="intro">
   <div class="section__inner">
-    <h2>TOEFL学習でこんな悩みありませんか？</h2>
+    <h2>TOEFL学習で<br class="sm">こんな悩みありませんか？</h2>
     <ul>
       <li>勉強の習慣が<br>身についていない</li>
       <li>勉強しているはず<br>なのに点数が伸びない</li>
       <li>正しい勉強方法が<br>わからない</li>
     </ul>
     <div class="intro__box">
-      <h2>Engressは<br><span>TOEFLに特化したスクール</span>です</h2>
+      <h2>Engressは<br><span>TOEFLに特化した<br class="sm">スクール</span>です</h2>
       <p>完全オーダーメイドで、１人１人の悩みに合わせた最適な指導で<br>TOEFLの苦手分野を克服します。</p>
     </div>
   </div><!-- /.section__inner -->
@@ -17,7 +17,7 @@
 
 <section class="features">
   <div class="section__inner">
-    <h2 class="section__title">TOEFL対策に特化したEngress3つの強み</h2>
+    <h2 class="section__title">TOEFL対策に特化した<br class="sm">Engress3つの強み</h2>
     <ul class="features__list">
       <li class="features__item">
         <div>
@@ -99,7 +99,7 @@
       <li class="flow__item">
         <div class="flow__number"><span>03</span></div>
         <dl>
-          <dt>学習プランの<br class="md">ご提供</dt>
+          <dt>学習プランのご提供</dt>
           <div></div>
           <dd>目標達成のために最適な学習プランをご提案致します。</dd>
         </dl>
