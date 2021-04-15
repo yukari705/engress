@@ -39,12 +39,16 @@ ul {
     list-style: none;
 }
 
-br.sm {
-    display: none;
+br.pc {
+    display: block;
 
-    @include m.mq(v.$sm) {
-        display: block;
-    }
+@include m.mq(v.$md) {
+    display: none;
+}
+
+@include m.mq(v.$sm) {
+    display: none;
+}
 }
 
 br.md {
@@ -59,17 +63,14 @@ br.md {
     }
 }
 
-br.pc {
-    display: block;
-
-    @include m.mq(v.$md) {
-        display: none;
-    }
+br.sm {
+    display: none;
 
     @include m.mq(v.$sm) {
-        display: none;
+        display: block;
     }
 }
+
 
 /* INTRO
 ----------------------------- */
@@ -221,6 +222,8 @@ br.pc {
             width: 55.5%;
             display: flex;
             flex-direction: column;
+            padding-top: 60px;
+            position: relative;
 
             h3 {
                 margin-bottom: 30px;
@@ -229,6 +232,10 @@ br.pc {
                 @include m.mq(v.$sm) {
                     margin-bottom: 10px;
                 }
+            }
+
+            @include m.mq(v.$md) {
+                padding-top: 40px;
             }
 
             @include m.mq(v.$sm) {
@@ -259,9 +266,11 @@ br.pc {
     &__number {
         @include m.txt-bg($color: v.$main-color);
         margin-bottom: 30px;
-        padding: 10px 25px;
+        padding: 5px 25px;
+        position: absolute;
+        top: 0;
+
         font-size: 0.75rem;
-        white-space: nowrap;
 
         @include m.mq(v.$md) {
             margin-bottom: 10px;
@@ -1079,7 +1088,6 @@ br.pc {
         top: 0;
         left: 0;
         font-size: 12px;
-        white-space: nowrap;
     }
 
     &__body {

@@ -68,7 +68,7 @@
     object-fit: $type;
 }
 
-@mixin txt-bg($width: fit-content, $color: v.$text-color) {
+@mixin txt-bg($width: auto, $color: v.$text-color) {
     display: block;
     width: $width;
     background: $color;
