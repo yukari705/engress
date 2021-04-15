@@ -18,7 +18,7 @@
                 <li>
                     <a class="relative-article__item" href="<?php the_permalink() ?>">
                         <figure><img src="<?php echo get_the_post_thumbnail_url(); ?>"></figure>
-                        <p><?php the_title(); ?></p>
+                        <p><?php echo wp_trim_words( get_the_title(), 50, '...' ); ?></p>
                     </a>
                 </li>
         <?php endforeach;

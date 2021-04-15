@@ -22,7 +22,7 @@ html {
 }
 
 body {
-    font-family: "Yu Gothic", "YuGothic", "游ゴシック", 'Noto Sans JP', sans-serif;
+    font-family: YuGothic, "YuGothic", 'Noto Sans JP', sans-serif;
     color: v.$text-color;
 }
 
@@ -520,6 +520,10 @@ br.sm {
         justify-content: space-between;
         align-items: center;
         cursor: pointer;
+
+        @include m.mq(v.$sm) {
+            padding: 10px 0;
+        }
 
         h3 {
             font-size: 16px;
